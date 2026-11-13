@@ -14,4 +14,4 @@ Why: A description of the machinery is not an offer. The decks already had the o
 
 How: Home sections in that order. Receipt `home-sell` points at the gist and says the decks are the author's notes.
 
-Hash: pending this commit.
+Hash: 897ad23.

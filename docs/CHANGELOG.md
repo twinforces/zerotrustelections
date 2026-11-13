@@ -60,7 +60,7 @@ Why: The opening page was a description of the design. The two marketing decks s
 
 How: `src/components/home-page.tsx`. The decks are the wording. The receipt says they are not evidence the design works.
 
-Hash: pending this commit.
+Hash: 897ad23.
 
 ### What did not work
 
