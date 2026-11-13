@@ -50,7 +50,7 @@ Why: The share card should be that picture. The X feed banner was left alone bec
 
 How: Cropped GrumpyBallots.jpg toward the face and the box, JPEG at q:v 4, handed over to public/og.jpg. site.json already said custom.
 
-Hash: pending this commit.
+Hash: 8cef2ef.
 
 ### What did not work
 
