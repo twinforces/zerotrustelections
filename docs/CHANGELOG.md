@@ -42,6 +42,16 @@ How: Nav item in the header. Eight receipts get the fairy: ledger, Fabric, NIST,
 
 Hash: 781efbf.
 
+## 2026-11-13 card
+
+What: The link preview is the supplied ballot-box portrait, 1200 by 630.
+
+Why: The share card should be that picture. The X feed banner was left alone because there is not one, and this is not a game card.
+
+How: Cropped GrumpyBallots.jpg toward the face and the box, JPEG at q:v 4, handed over to public/og.jpg. site.json already said custom.
+
+Hash: pending this commit.
+
 ### What did not work
 
 What: Writing Elections.md from this workspace to retire the leftover PARTIAL line.
