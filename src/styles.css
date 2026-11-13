@@ -539,24 +539,28 @@
   text-decoration: underline;
 }
 
-.fairy {
+.fairy-link {
   display: inline-flex;
-  width: 1.05rem;
-  height: 1.05rem;
-  margin-left: 0.28rem;
-  color: var(--color-teal);
-  vertical-align: -0.15em;
+  vertical-align: -0.45em;
+  margin-left: 0.2rem;
+  text-decoration: none;
 }
 
-.fairy svg {
-  width: 100%;
-  height: 100%;
+.fairy {
+  display: inline-block;
+  width: 1.7rem;
+  height: 1.7rem;
+  object-fit: cover;
+  border-radius: 0.3rem;
+  vertical-align: -0.45em;
 }
 
 .fairy-lg {
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 5.5rem;
+  height: 5.5rem;
   margin-left: 0;
+  vertical-align: top;
+  border-radius: 0.45rem;
   flex-shrink: 0;
 }
 

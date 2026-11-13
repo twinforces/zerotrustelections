@@ -22,6 +22,16 @@ How: `public/grumpy.jpg` is GrumpySource.jpg. The fairy is an inline mark on led
 
 Hash: ace0450.
 
+## 2026-11-13 fairy
+
+What: Replaced the stick-figure fairy with an illustrated one, and put it on the explanations that use a signature, a ledger, or a checksum.
+
+Why: The line drawing did not read as a fairy, and the mark was only on glossary terms, so the prose looked unmarked.
+
+How: `public/crypto-fairy.jpg` is an original animated-feature illustration. It is not a named character. The same component is used in the step text, the ledes, and the crypto primers.
+
+Hash: pending this commit.
+
 ### What did not work
 
 What: Writing Elections.md from this workspace to retire the leftover PARTIAL line.

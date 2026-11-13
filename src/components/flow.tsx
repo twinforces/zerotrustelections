@@ -8,7 +8,7 @@ export function PageIntro({
 }: {
   kicker: string;
   title: string;
-  lede: string;
+  lede: ReactNode;
   children?: ReactNode;
 }) {
   return (
@@ -57,7 +57,7 @@ export function Steps({
   items,
 }: {
   label: string;
-  items: { title: string; text: string }[];
+  items: { title: string; text: ReactNode }[];
 }) {
   return (
     <ol className="step-flow" aria-label={label}>

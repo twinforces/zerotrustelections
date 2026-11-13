@@ -1,18 +1,21 @@
 import { FlowBlock, PageIntro, RecordPair, Steps } from "@/components/flow";
 import { DiveList, Limit, PrimerList, Tail } from "@/components/page-bits";
 import { Term } from "@/components/term";
+import { CryptoFairy } from "@/components/crypto-fairy";
 
 const PRIMERS = [
-  { href: "https://www.nist.gov/blockchain", label: "What is a blockchain?", source: "NIST" },
+  { href: "https://www.nist.gov/blockchain", label: "What is a blockchain?", source: "NIST", crypto: true },
   {
     href: "https://hyperledger-fabric.readthedocs.io/en/latest/whatis.html",
     label: "Hyperledger Fabric overview",
     source: "Hyperledger",
+    crypto: true,
   },
   {
     href: "https://hyperledger-fabric.readthedocs.io/en/latest/blockchain.html",
     label: "Permissioned and public chains",
     source: "Hyperledger",
+    crypto: true,
   },
 ];
 
@@ -22,7 +25,13 @@ export function RegistrationPage() {
       <PageIntro
         kicker="Registration"
         title="Every change to the roll stays readable."
-        lede="Three ordinary events. A person registers. A person dies. A person moves. Each one is a signed write on an append-only ledger. Nothing is erased."
+        lede={
+          <>
+            Three ordinary events. A person registers. A person dies. A person moves. Each one is a signed
+            write on an append-only ledger.
+            <CryptoFairy /> Nothing is erased.
+          </>
+        }
       >
         <nav className="page-jumps" aria-label="Registration flows">
           <a href="#register">Registers</a>
@@ -66,11 +75,22 @@ export function RegistrationPage() {
               },
               {
                 title: "A known office signs",
-                text: "Writers are election offices and authorized auditors, not anonymous keys.",
+                text: (
+                  <>
+                    Writers are election offices and authorized auditors, not anonymous keys.
+                    <CryptoFairy />
+                  </>
+                ),
               },
               {
                 title: "The ledger appends",
-                text: "valid=true, the location, the time, and the signer. The prior state was empty, and that fact stays.",
+                text: (
+                  <>
+                    valid=true, the location, the time, and the signer. The prior state was empty, and that
+                    fact stays.
+                    <CryptoFairy />
+                  </>
+                ),
               },
               {
                 title: "Counts and the phone move",
@@ -117,7 +137,13 @@ export function RegistrationPage() {
             items={[
               {
                 title: "A death signal arrives",
-                text: "A vital record or an outside oracle is consulted. The ledger records that it was consulted. It does not become the oracle.",
+                text: (
+                  <>
+                    A vital record or an outside oracle is consulted. The ledger records that it was consulted.
+                    It does not become the oracle.
+                    <CryptoFairy />
+                  </>
+                ),
               },
               {
                 title: "The office writes valid=false",
@@ -170,7 +196,13 @@ export function RegistrationPage() {
               },
               {
                 title: "Location 1 changes to Location 2",
-                text: "One signed transaction. valid stays true. The old location is the previous value, not a deleted life.",
+                text: (
+                  <>
+                    One signed transaction. valid stays true. The old location is the previous value, not a
+                    deleted life.
+                    <CryptoFairy />
+                  </>
+                ),
               },
               {
                 title: "Both places' counts move",

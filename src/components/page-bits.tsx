@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import type { ReactNode } from "react";
+import { CryptoFairy } from "@/components/crypto-fairy";
 import { divesFor, type DiveSection } from "@/content/dives";
 
 export function DiveList({ section }: { section: DiveSection }) {
@@ -27,7 +28,11 @@ export function DiveList({ section }: { section: DiveSection }) {
   );
 }
 
-export function PrimerList({ items }: { items: { href: string; label: string; source: string }[] }) {
+export function PrimerList({
+  items,
+}: {
+  items: { href: string; label: string; source: string; crypto?: boolean }[];
+}) {
   return (
     <div className="mt-8">
       <h2 className="text-xs font-semibold tracking-widest text-faint uppercase">Off-site primers</h2>
@@ -42,6 +47,7 @@ export function PrimerList({ items }: { items: { href: string; label: string; so
             >
               <span>
                 {item.label}
+                {item.crypto ? <CryptoFairy /> : null}
                 <span className="mt-0.5 block text-sm text-faint">{item.source}</span>
               </span>
               <ArrowUpRight className="size-4 shrink-0 text-teal" aria-hidden="true" />

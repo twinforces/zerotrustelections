@@ -1,5 +1,6 @@
 import { Bars, Compare, FlowBlock, PageIntro, Steps } from "@/components/flow";
 import { DiveList, Limit, PrimerList, Tail } from "@/components/page-bits";
+import { CryptoFairy } from "@/components/crypto-fairy";
 import { Term } from "@/components/term";
 
 const PRIMERS = [
@@ -75,7 +76,8 @@ export function CountingPage() {
             </li>
             <li>
               <strong>Optional phone check.</strong> A phone computes the expected checksum from a voter
-              identifier plus the emoji sequence. The voter can confirm the paper is{" "}
+              identifier plus the emoji sequence.
+              <CryptoFairy /> The voter can confirm the paper is{" "}
               <Term id="cast-as-intended" /> before it goes in the box.
             </li>
             <li>
@@ -92,8 +94,8 @@ export function CountingPage() {
         lede={
           <>
             A <Term id="precinct-captain">precinct captain</Term>, or any other observer, may reject secrecy
-            and vote a known party line. That checksum must appear in the published log. Everyone else keeps a
-            private receipt.
+            and vote a known party line. That checksum must appear in the published log.
+            <CryptoFairy /> Everyone else keeps a private receipt.
           </>
         }
       >
@@ -108,7 +110,8 @@ export function CountingPage() {
               <p className="step-n">Ordinary voter</p>
               <p className="step-title">Receipt stays private</p>
               <p className="step-text">
-                The checksum, if they compute one, never has to leave the phone. Secrecy is the default.
+                The checksum, if they compute one, never has to leave the phone.
+                <CryptoFairy /> Secrecy is the default.
               </p>
             </div>
             <div className="fork-arm is-public">
@@ -207,7 +210,8 @@ export function CountingPage() {
         <h2 className="font-serif text-3xl font-medium">What the observers are for</h2>
         <p className="mt-4 max-w-3xl text-pretty text-muted">
           <Term id="precinct-captain">Local observers</Term> watch the simple signals: the three-way check, the
-          injected offset, canary checksums, and local aggregates. An observer report is not a fourth total.
+          injected offset, canary checksums,
+          <CryptoFairy /> and local aggregates. An observer report is not a fourth total.
           Paper and the published figures are.
         </p>
         <DiveList section="counting" />

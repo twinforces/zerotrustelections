@@ -333,7 +333,7 @@ export const receipts: ReceiptGroup[] = [
         source: "Build instruction, 13 November 2026",
         href: "https://github.com/twinforces/zerotrustelections/blob/main/src/components/crypto-fairy.tsx",
         supports:
-          "The home sentence, including $GRUMPYSHITCOIN, is the author's wording. There is no paper behind the fairy. The mark sits on append-only ledger, permissioned ledger, Fabric, membership, certificate authority, endorsement, and checksum.",
+          "The home sentence, including $GRUMPYSHITCOIN, is the author's wording. There is no paper behind the fairy. The picture is an original illustration in an animated-feature style, not a named character. It sits on the explanations that use a ledger, a signature, or a checksum, and on those glossary terms.",
       },
       {
         id: "fonts",

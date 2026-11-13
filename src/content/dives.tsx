@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { CryptoFairy } from "@/components/crypto-fairy";
 import { Term } from "@/components/term";
 
 export type DiveSection = "registration" | "counting";
@@ -8,7 +9,7 @@ export type Dive = {
   section: DiveSection;
   title: string;
   summary: string;
-  lede: string;
+  lede: ReactNode;
   body: ReactNode;
 };
 
@@ -18,7 +19,13 @@ export const dives: Dive[] = [
     section: "registration",
     title: "Soft-delete only",
     summary: "valid=false, reversible, and signed. The old row stays readable.",
-    lede: "A removal is a new transaction, not a vanished row. The record is marked invalid, the reason and the signer stay attached, and a later transaction can put it back.",
+    lede: (
+      <>
+        A removal is a new transaction, not a vanished row. The record is marked invalid, the reason and the
+        signer stay attached,
+        <CryptoFairy /> and a later transaction can put it back.
+      </>
+    ),
     body: (
       <>
         <p>
@@ -46,7 +53,8 @@ export const dives: Dive[] = [
         <h2>What it does not do</h2>
         <p>
           An <Term id="oracle" /> can still feed a bad eligibility signal. The ledger records that the oracle
-          was consulted and that a soft-delete followed. It does not audit Systematic Alien Verification for
+          was consulted and that a soft-delete followed.
+          <CryptoFairy /> It does not audit Systematic Alien Verification for
           Entitlements (<Term id="save">SAVE</Term>) or the Electronic Registration Information Center (
           <Term id="eric">ERIC</Term>). A sourced mistake is still a mistake. It is no longer an invisible one.
         </p>
@@ -124,7 +132,13 @@ export const dives: Dive[] = [
     section: "counting",
     title: "Emoji sequences",
     summary: "A unique mark on the ballot and on every campaign piece. Similar names stop being interchangeable.",
-    lede: "Each candidate wears an emoji sequence, part self-chosen and part party-assigned. It is printed on the ballot and on all campaign materials, and it is the visual half of the voter's checksum.",
+    lede: (
+      <>
+        Each candidate wears an emoji sequence, part self-chosen and part party-assigned. It is printed on the
+        ballot and on all campaign materials, and it is the visual half of the voter's checksum.
+        <CryptoFairy />
+      </>
+    ),
     body: (
       <>
         <p>
@@ -158,7 +172,13 @@ export const dives: Dive[] = [
     section: "counting",
     title: "Public canaries",
     summary: "Some observers reject secrecy and publish a known ballot. Everyone else keeps a private receipt.",
-    lede: "Not every ballot is secret. A precinct captain, or any other observer, may vote a known party-line ballot and place the checksum in the published log.",
+    lede: (
+      <>
+        Not every ballot is secret. A precinct captain, or any other observer, may vote a known party-line
+        ballot and place the checksum in the published log.
+        <CryptoFairy />
+      </>
+    ),
     body: (
       <>
         <p>
@@ -172,9 +192,11 @@ export const dives: Dive[] = [
           Secrecy stays the default. Ordinary voters keep private receipts. Only the people who take the
           canary role give secrecy up. A captain who wants a private ballot is still a captain. They just do
           not add a public checksum.
+          <CryptoFairy />
         </p>
         <p>
-          The checksum is not the same thing as an <Term id="observer-report" />. The report is their word
+          The checksum is not the same thing as an <Term id="observer-report" />.
+          <CryptoFairy /> The report is their word
           about the room. The checksum is a checkable fact about one ballot. Their word is still not
           authoritative. Paper and the published figures are.
         </p>
@@ -304,7 +326,8 @@ export const dives: Dive[] = [
         <p>
           A <Term id="precinct-captain" /> watches simple signals: the{" "}
           <Term id="three-way">three-way reconciliation</Term>, the <Term id="injected-ballot">injected
-          offset</Term>, <Term id="canary">public canary</Term> checksums in the log, and local{" "}
+          offset</Term>, <Term id="canary">public canary</Term> checksums in the log,
+          <CryptoFairy /> and local{" "}
           <Term id="aggregate">aggregates</Term>. The same captain may also be a canary, by rejecting secrecy
           and voting a known party line. Opposing captains are the adversarial pair. Each has a reason to
           catch the other resting.
