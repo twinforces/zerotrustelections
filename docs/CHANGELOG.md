@@ -20,7 +20,7 @@ Why: The GitHub avatar was the wrong face. The fairy is the author's way of mark
 
 How: `public/grumpy.jpg` is GrumpySource.jpg. The fairy is an inline mark on ledger, identity, and checksum terms, explained on the home page. Receipts were re-fetched against the gist.
 
-Hash: pending this commit.
+Hash: ace0450.
 
 ### What did not work
 

@@ -14,4 +14,4 @@ Why: The GitHub face was wrong. Readers need a joke-sized signal for "crypto is 
 
 How: `public/grumpy.jpg`, `src/components/crypto-fairy.tsx`, home note, term marks, receipts updated.
 
-Hash: pending this commit.
+Hash: ace0450.
