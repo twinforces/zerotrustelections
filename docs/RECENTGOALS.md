@@ -14,4 +14,4 @@ Why: A line icon did not look like a fairy, and the proof language in the flows 
 
 How: `public/crypto-fairy.jpg` plus marks in the registration steps, counting checksum sentences, dive ledes, and the blockchain primers.
 
-Hash: pending this commit.
+Hash: 24fd075.

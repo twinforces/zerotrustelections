@@ -30,7 +30,7 @@ Why: The line drawing did not read as a fairy, and the mark was only on glossary
 
 How: `public/crypto-fairy.jpg` is an original animated-feature illustration. It is not a named character. The same component is used in the step text, the ledes, and the crypto primers.
 
-Hash: pending this commit.
+Hash: 24fd075.
 
 ### What did not work
 
