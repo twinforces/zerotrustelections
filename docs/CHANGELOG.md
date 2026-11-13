@@ -10,7 +10,7 @@ Why: The design needed a repo, a face next to the title, and a bibliography that
 
 How: See `docs/site.md` for why the pages are split. See `src/content/receipts.ts` for each claim.
 
-Hash: pending the first commit.
+Hash: aa19a4b
 
 ### What did not work
 
