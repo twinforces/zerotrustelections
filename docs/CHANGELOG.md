@@ -32,6 +32,16 @@ How: `public/crypto-fairy.jpg` is an original animated-feature illustration. It 
 
 Hash: 24fd075.
 
+## 2026-11-13 receipts
+
+What: Receipts is in the sticky navigation. Crypto receipts carry the fairy.
+
+Why: The page was only a footer link, and the proof claims on it were unmarked.
+
+How: Nav item in the header. Eight receipts get the fairy: ledger, Fabric, NIST, the move write, checksum, canary, and the fairy itself.
+
+Hash: pending this commit.
+
 ### What did not work
 
 What: Writing Elections.md from this workspace to retire the leftover PARTIAL line.

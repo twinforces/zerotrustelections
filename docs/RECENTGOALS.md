@@ -8,10 +8,10 @@ Why: The design was one scrolling page, then the two flows needed diagrams. Clai
 
 How: TanStack Start app in this repo. Canonical source log is `src/content/receipts.ts`, rendered at `/receipts`. Profile mark is `public/grumpy.jpg`. Docs stay short on purpose.
 
-What: The Crypto Fairy is an illustration, and it marks the explanations, not only the dotted terms.
+What: Receipts is a nav page, and the fairy marks the proof claims on it.
 
-Why: A line icon did not look like a fairy, and the proof language in the flows was easy to miss.
+Why: The bibliography was a footer link, so it did not read as one of the pages.
 
-How: `public/crypto-fairy.jpg` plus marks in the registration steps, counting checksum sentences, dive ledes, and the blockchain primers.
+How: Sticky nav plus the fairy on the eight crypto receipts.
 
-Hash: 24fd075.
+Hash: pending this commit.

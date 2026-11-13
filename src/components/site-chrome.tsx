@@ -6,6 +6,7 @@ const NAV = [
   { to: "/counting", label: "Counting" },
   { to: "/red-team", label: "Red Team" },
   { to: "/glossary", label: "Glossary" },
+  { to: "/receipts", label: "Receipts" },
 ] as const;
 
 export function SiteHeader() {
