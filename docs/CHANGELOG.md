@@ -40,7 +40,7 @@ Why: The page was only a footer link, and the proof claims on it were unmarked.
 
 How: Nav item in the header. Eight receipts get the fairy: ledger, Fabric, NIST, the move write, checksum, canary, and the fairy itself.
 
-Hash: pending this commit.
+Hash: 781efbf.
 
 ### What did not work
 

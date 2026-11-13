@@ -14,4 +14,4 @@ Why: The bibliography was a footer link, so it did not read as one of the pages.
 
 How: Sticky nav plus the fairy on the eight crypto receipts.
 
-Hash: pending this commit.
+Hash: 781efbf.
