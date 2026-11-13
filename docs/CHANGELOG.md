@@ -52,6 +52,16 @@ How: Cropped GrumpyBallots.jpg toward the face and the box, JPEG at q:v 4, hande
 
 Hash: 8cef2ef.
 
+## 2026-11-13 sell
+
+What: The home page now sells in order: who you are, the job, why you cannot do it, what this does, what you get, and the value by audience.
+
+Why: The opening page was a description of the design. The two marketing decks say to start from their jobs, pains, and gains.
+
+How: `src/components/home-page.tsx`. The decks are the wording. The receipt says they are not evidence the design works.
+
+Hash: pending this commit.
+
 ### What did not work
 
 What: Writing Elections.md from this workspace to retire the leftover PARTIAL line.

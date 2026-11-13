@@ -8,10 +8,10 @@ Why: The design was one scrolling page, then the two flows needed diagrams. Clai
 
 How: TanStack Start app in this repo. Canonical source log is `src/content/receipts.ts`, rendered at `/receipts`. Profile mark is `public/grumpy.jpg`. Docs stay short on purpose.
 
-What: Receipts is a nav page, and the fairy marks the proof claims on it.
+What: The home page sells from the reader's job, through the pain, to what this does and what they get.
 
-Why: The bibliography was a footer link, so it did not read as one of the pages.
+Why: A description of the machinery is not an offer. The decks already had the offer.
 
-How: Sticky nav plus the fairy on the eight crypto receipts.
+How: Home sections in that order. Receipt `home-sell` points at the gist and says the decks are the author's notes.
 
-Hash: 781efbf.
+Hash: pending this commit.

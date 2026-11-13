@@ -14,7 +14,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Sunlight is the best disinfectant. A continuous-audit design for voter rolls and paper ballots.",
+          "If you vote, run, watch, or have to defend an election, this is a way to see the roll and the count while they happen.",
       },
       { name: "theme-color", content: "#071422" },
     ],

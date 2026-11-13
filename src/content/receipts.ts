@@ -51,6 +51,15 @@ export const receipts: ReceiptGroup[] = [
         supports:
           "There is no separate published paper for those sentences. The gist is the linked record. The receipt below names each place the gist is thinner than the page.",
       },
+      {
+        id: "home-sell",
+        claim: "The home page is jobs, then why you cannot do them, then what this does, then what you get.",
+        appears: "Home.",
+        source: "Author's marketing notes, 13 November 2026, read against Elections.md",
+        href: GIST,
+        supports:
+          "Two decks supplied that day, one for the roll and one for the count, are the wording. The gist already says to map a scenario onto voter, official, and observer jobs. The decks add courts and the public, and they name the pains and the gains. They are not a published study, and they are not evidence the design works.",
+      },
     ],
   },
   {
