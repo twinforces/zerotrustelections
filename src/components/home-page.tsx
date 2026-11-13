@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { CryptoFairy } from "@/components/crypto-fairy";
 
 export function HomePage() {
   return (
@@ -37,6 +38,17 @@ export function HomePage() {
             Two processes, watched while they happen. The roll records every change. The count starts from
             paper and ends in arithmetic a person can redo.
           </p>
+          <div id="crypto-fairy" className="fairy-note">
+            <CryptoFairy large />
+            <div className="min-w-0">
+              <h2 className="font-serif text-2xl font-medium">The Crypto Fairy</h2>
+              <p className="mt-2 max-w-2xl text-pretty text-muted">
+                Look, just because I can do crypto, and can kind of sort of follow the math, and have my own
+                shitcoin, $GRUMPYSHITCOIN, doesn't mean I take crypto seriously. When you see this, that
+                lets you know there's crypto stuff going on behind the scenes, to prove who/what/where.
+              </p>
+            </div>
+          </div>
         </div>
       </header>
 

@@ -450,6 +450,16 @@ export const glossary: GlossaryEntry[] = [
     aliases: ["checklist", "watcher"],
   },
   {
+    id: "crypto-fairy",
+    term: "Crypto Fairy",
+    short:
+      "The Crypto Fairy marks a place where cryptography is proving who did something, what it was, or where it sits in the log.",
+    note: "It is a reading mark, not a claim that crypto solves elections. The joke on the home page is the author's: being able to follow the math, and having a shitcoin called $GRUMPYSHITCOIN, is not the same as taking crypto seriously. Paper and public arithmetic still decide the count.",
+    category: "Principles",
+    related: ["permissioned-ledger", "commitment", "msp", "append-only"],
+    aliases: ["fairy", "GRUMPYSHITCOIN"],
+  },
+  {
     id: "principle-perfect",
     term: "Perfect is the enemy of the good",
     short:

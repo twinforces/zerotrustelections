@@ -12,10 +12,20 @@ How: See `docs/site.md` for why the pages are split. See `src/content/receipts.t
 
 Hash: aa19a4b
 
+## 2026-11-13 later
+
+What: Swapped the title portrait for the X image. Added the Crypto Fairy. Recorded that the gist no longer says PARTIAL.
+
+Why: The GitHub avatar was the wrong face. The fairy is the author's way of marking cryptographic proof without pretending to take crypto seriously. The receipts were stale on PARTIAL.
+
+How: `public/grumpy.jpg` is GrumpySource.jpg. The fairy is an inline mark on ledger, identity, and checksum terms, explained on the home page. Receipts were re-fetched against the gist.
+
+Hash: pending this commit.
+
 ### What did not work
 
 What: Writing Elections.md from this workspace to retire the leftover PARTIAL line.
 
 Why: The gist outcome list says DETECTED, but an earlier bullet still tells the session to print PARTIAL. Leaving that line makes red-team sessions ignore the rename.
 
-How: `github___update_gist` returned 403, resource not accessible by the integration. The site follows DETECTED anyway. The gist edit is still manual.
+How: `github___update_gist` returned 403. The author updated the gist later the same day. PARTIAL is gone. Do not retry that write unless the gist drifts again.

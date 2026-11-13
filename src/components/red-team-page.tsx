@@ -1,6 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
 import { PageIntro } from "@/components/flow";
-import { Term } from "@/components/term";
 import {
   BASELINE_GIST,
   DETECTED_BULLETS,
@@ -135,7 +134,7 @@ export function RedTeamPage() {
                 <li>Throw scenarios until you get a FAILURE or DETECTED card. Screenshot it or save the text.</li>
               </ol>
               <p className="mt-4 text-sm text-faint">
-                The session follows the public gist. <Term id="failure-card">PARTIAL</Term> is retired.{" "}
+                The session follows the public gist. The card is FAILURE, DETECTED, or DESIGN HELD.{" "}
                 <a className="prose-link font-normal" href={BASELINE_GIST}>
                   Read the baseline
                 </a>

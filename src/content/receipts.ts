@@ -214,7 +214,7 @@ export const receipts: ReceiptGroup[] = [
         source: "Build instruction, 13 November 2026, plus the gist outcome labels",
         href: GIST,
         supports:
-          "The gist defines DETECTED as an attack that still has at least one independent signal, and FAILURE as no signal remaining. It does not say the three signals are check-ins, paper, and the scanner. That mapping is the build instruction. The gist still has an earlier line that tells the session to print PARTIAL. The site does not use PARTIAL.",
+          "The gist defines DETECTED as an attack that still has at least one independent signal, and FAILURE as no signal remaining. It does not say the three signals are check-ins, paper, and the scanner. That mapping is the build instruction.",
       },
       {
         id: "injected",
@@ -265,7 +265,7 @@ export const receipts: ReceiptGroup[] = [
   {
     id: "scoring",
     title: "Red-team cards",
-    note: "The outcome list and the earlier instruction in the same gist do not match. The site follows the outcome list and the later instruction to retire PARTIAL.",
+    note: "Re-fetched 13 November 2026. PARTIAL is gone. The middle label is DETECTED. One operating bullet still paints FAILURE and DETECTED in the same dark red style. The image rules, and this site, keep DETECTED amber.",
     items: [
       {
         id: "labels",
@@ -278,12 +278,12 @@ export const receipts: ReceiptGroup[] = [
       },
       {
         id: "partial-retired",
-        claim: "PARTIAL is not a label on this site.",
+        claim: "PARTIAL is retired. The gist now says DETECTED.",
         appears: "Red Team, glossary entry Red-team card.",
-        source: "Elections.md, both the leftover line and the outcome list",
+        source: "Elections.md, operating rules and outcome labels",
         href: GIST_RAW,
         supports:
-          "On 13 November 2026 the outcome list says DETECTED. An earlier operating-rules bullet still says to print PARTIAL in a red card. The site follows the outcome list. The gist write from this workspace was refused, so that leftover line is still in the file.",
+          "Re-fetched 13 November 2026. The operating bullet that used to say PARTIAL now says FAILURE or DETECTED. The outcome list matches. The site never used PARTIAL.",
       },
       {
         id: "grok",
@@ -319,12 +319,21 @@ export const receipts: ReceiptGroup[] = [
       },
       {
         id: "photo",
-        claim: "The icon beside the title is the GitHub profile picture for twinforces.",
+        claim: "The icon beside the title is the X portrait supplied for this site, not the GitHub avatar.",
         appears: "Home title and the header mark.",
-        source: "GitHub avatar, user 711888",
-        href: "https://github.com/twinforces",
+        source: "X portrait, supplied 13 November 2026",
+        href: "https://x.com/GrumpyTechBro",
         supports:
-          "Downloaded 13 November 2026 from the avatar URL on the authenticated GitHub profile (Pierce T. Wetter III, twitter_username grumpytechbro). Stored at public/grumpy.jpg so the page does not depend on that host at view time.",
+          "The file handed to the build was GrumpySource.jpg. It is stored at public/grumpy.jpg so the page does not hotlink X. The GitHub avatar was the first mark and was the wrong picture.",
+      },
+      {
+        id: "crypto-fairy",
+        claim: "A small fairy marks the spots where cryptography is proving who, what, or where. It is not an endorsement of crypto.",
+        appears: "Home, and beside ledger, identity, and checksum terms.",
+        source: "Build instruction, 13 November 2026",
+        href: "https://github.com/twinforces/zerotrustelections/blob/main/src/components/crypto-fairy.tsx",
+        supports:
+          "The home sentence, including $GRUMPYSHITCOIN, is the author's wording. There is no paper behind the fairy. The mark sits on append-only ledger, permissioned ledger, Fabric, membership, certificate authority, endorsement, and checksum.",
       },
       {
         id: "fonts",
