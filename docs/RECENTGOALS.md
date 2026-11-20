@@ -8,10 +8,10 @@ Why: The design was one scrolling page, then the two flows needed diagrams. Clai
 
 How: TanStack Start app in this repo. Canonical source log is `src/content/receipts.ts`, rendered at `/receipts`. Profile mark is `public/grumpy.jpg`. Docs stay short on purpose.
 
-What: Attacks is a page. Known cases are graded HELD, DETECTED, RESIDUAL, or PARTIAL.
+What: Attacks is a page. Known cases are graded PREVENT, DETECTED, RESIDUAL, or PARTIAL.
 
 Why: The red-team card is three words. The catalog needs the cases that are only partly covered, and the ones that remain if custody fails.
 
 How: `/attacks`, linked from the nav and the red-team page. Receipt `attacks-catalog`.
 
-Hash: 1adce94.
+Hash: pending this commit.

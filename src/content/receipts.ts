@@ -62,7 +62,7 @@ export const receipts: ReceiptGroup[] = [
       },
       {
         id: "attacks-catalog",
-        claim: "The Attacks page grades known cases HELD, DETECTED, RESIDUAL, or PARTIAL. That PARTIAL is a catalog grade, not a red-team card.",
+        claim: "The Attacks page grades known cases PREVENT, DETECTED, RESIDUAL, or PARTIAL. That PARTIAL is a catalog grade, not a red-team card.",
         appears: "Attacks. The red-team page points at it. The glossary says the card itself does not use PARTIAL.",
         source: "Author's attack catalog, 20 November 2026",
         href: GIST,

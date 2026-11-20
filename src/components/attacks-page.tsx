@@ -76,7 +76,7 @@ export function AttacksPage() {
         <div className="mx-auto max-w-6xl px-5 py-12 sm:py-16">
           <h2 className="max-w-3xl font-serif text-3xl font-medium text-balance">What is left.</h2>
           <p className="mt-4 max-w-3xl text-pretty text-muted">
-            Most of the technical and historical attacks are HELD or DETECTED under the current baseline. The
+            Most of the technical and historical attacks are PREVENT or DETECTED under the current baseline. The
             RESIDUAL items are the sole-custody paper path, if those controls are defeated, and oracles that
             the design trusts. Intimidation at the polls is residual because it is operational, not a bug in
             the ledger.

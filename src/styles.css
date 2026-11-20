@@ -476,7 +476,7 @@
   font-size: 0.78rem;
 }
 
-.verdict.is-held {
+.verdict.is-prevent {
   color: var(--color-teal-bright);
 }
 

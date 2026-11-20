@@ -1,4 +1,4 @@
-export type Verdict = "HELD" | "DETECTED" | "RESIDUAL" | "PARTIAL";
+export type Verdict = "PREVENT" | "DETECTED" | "RESIDUAL" | "PARTIAL";
 
 export type Attack = {
   name: string;
@@ -14,7 +14,7 @@ export type AttackGroup = {
 
 export const VERDICTS: { id: Verdict | "ALL"; label: string; means: string }[] = [
   { id: "ALL", label: "All", means: "" },
-  { id: "HELD", label: "HELD", means: "Prevented, or impractical under the baseline." },
+  { id: "PREVENT", label: "PREVENT", means: "Prevented, or impractical under the baseline." },
   { id: "DETECTED", label: "DETECTED", means: "The attack can land, and a signal surfaces it." },
   { id: "RESIDUAL", label: "RESIDUAL", means: "Still possible if the named controls are also defeated." },
   { id: "PARTIAL", label: "PARTIAL", means: "Limited by how many people are checking, or by a similar gap." },
@@ -83,7 +83,7 @@ export const attackGroups: AttackGroup[] = [
       },
       {
         name: "Paperless DRE vote flipping",
-        verdict: "HELD",
+        verdict: "PREVENT",
         handling: "The design requires paper.",
       },
       {
@@ -93,7 +93,7 @@ export const attackGroups: AttackGroup[] = [
       },
       {
         name: "Internet or remote voting compromise",
-        verdict: "HELD",
+        verdict: "PREVENT",
         handling: "Remote voting is not used.",
       },
     ],
@@ -166,7 +166,7 @@ export const attackGroups: AttackGroup[] = [
       },
       {
         name: "False flags to stall certification",
-        verdict: "HELD",
+        verdict: "PREVENT",
         handling: "A flag investigates only that single record.",
       },
       {
@@ -207,7 +207,7 @@ export const attackGroups: AttackGroup[] = [
       },
       {
         name: "Academic DRE demonstrations (Diebold, Sequoia, and the rest)",
-        verdict: "HELD",
+        verdict: "PREVENT",
         handling: "Paper is required. A paperless machine is out of the design.",
       },
     ],

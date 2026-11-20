@@ -9,7 +9,7 @@ export const Route = createFileRoute("/attacks")({
       {
         name: "description",
         content:
-          "Known attacks on the continuous-audit election design, graded HELD, DETECTED, RESIDUAL, or PARTIAL.",
+          "Known attacks on the continuous-audit election design, graded PREVENT, DETECTED, RESIDUAL, or PARTIAL.",
       },
     ],
   }),

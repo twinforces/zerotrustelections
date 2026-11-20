@@ -79,3 +79,13 @@ Why: The catalog is not the red-team card. A session is still FAILURE, DETECTED,
 How: `src/content/attacks.ts` and `/attacks`. The receipt says the list is the author's catalog of 20 November 2026, not Elections.md.
 
 Hash: 1adce94.
+
+## 2026-11-20 prevent
+
+What: The catalog grade HELD is now PREVENT.
+
+Why: HELD was the wrong word. The red-team card is still DESIGN HELD.
+
+How: The verdict id, the filter, and the copy that named the grade. DESIGN HELD was left alone.
+
+Hash: pending this commit.
