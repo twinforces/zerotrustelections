@@ -60,6 +60,15 @@ export const receipts: ReceiptGroup[] = [
         supports:
           "Two decks supplied that day, one for the roll and one for the count, are the wording. The gist already says to map a scenario onto voter, official, and observer jobs. The decks add courts and the public, and they name the pains and the gains. They are not a published study, and they are not evidence the design works.",
       },
+      {
+        id: "attacks-catalog",
+        claim: "The Attacks page grades known cases HELD, DETECTED, RESIDUAL, or PARTIAL. That PARTIAL is a catalog grade, not a red-team card.",
+        appears: "Attacks. The red-team page points at it. The glossary says the card itself does not use PARTIAL.",
+        source: "Author's attack catalog, 20 November 2026",
+        href: GIST,
+        supports:
+          "The list was supplied for the site that day. It is not in Elections.md. Check-in acknowledgement and provisional acknowledgement are named there as the reason photo-swap and the provisional side door are no longer a silent FAILURE. The gist still scores a session as FAILURE, DETECTED, or DESIGN HELD. The catalog is not a finished red-team log.",
+      },
     ],
   },
   {

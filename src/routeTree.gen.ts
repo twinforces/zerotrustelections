@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AttacksRouteImport } from './routes/attacks'
 import { Route as CountingRouteImport } from './routes/counting'
 import { Route as GlossaryRouteImport } from './routes/glossary'
 import { Route as ReceiptsRouteImport } from './routes/receipts'
@@ -21,6 +22,11 @@ import { Route as DivesSlugRouteImport } from './routes/dives/$slug'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AttacksRoute = AttacksRouteImport.update({
+  id: '/attacks',
+  path: '/attacks',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CountingRoute = CountingRouteImport.update({
@@ -61,6 +67,7 @@ const DivesSlugRoute = DivesSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/attacks': typeof AttacksRoute
   '/counting': typeof CountingRoute
   '/glossary': typeof GlossaryRoute
   '/receipts': typeof ReceiptsRoute
@@ -71,6 +78,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/attacks': typeof AttacksRoute
   '/counting': typeof CountingRoute
   '/glossary': typeof GlossaryRoute
   '/receipts': typeof ReceiptsRoute
@@ -82,6 +90,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/attacks': typeof AttacksRoute
   '/counting': typeof CountingRoute
   '/glossary': typeof GlossaryRoute
   '/receipts': typeof ReceiptsRoute
@@ -94,6 +103,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/attacks'
     | '/counting'
     | '/glossary'
     | '/receipts'
@@ -104,6 +114,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/attacks'
     | '/counting'
     | '/glossary'
     | '/receipts'
@@ -114,6 +125,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/attacks'
     | '/counting'
     | '/glossary'
     | '/receipts'
@@ -125,6 +137,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AttacksRoute: typeof AttacksRoute
   CountingRoute: typeof CountingRoute
   GlossaryRoute: typeof GlossaryRoute
   ReceiptsRoute: typeof ReceiptsRoute
@@ -141,6 +154,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/attacks': {
+      id: '/attacks'
+      path: '/attacks'
+      fullPath: '/attacks'
+      preLoaderRoute: typeof AttacksRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/counting': {
@@ -197,6 +217,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AttacksRoute: AttacksRoute,
   CountingRoute: CountingRoute,
   GlossaryRoute: GlossaryRoute,
   ReceiptsRoute: ReceiptsRoute,

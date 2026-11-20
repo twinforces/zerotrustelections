@@ -441,6 +441,64 @@
   color: var(--color-ink);
 }
 
+.attack-filters {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grade-key {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1.75rem;
+  max-width: 42rem;
+  padding: 0;
+  list-style: none;
+}
+
+.grade-key li {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0.75rem;
+  align-items: baseline;
+  color: var(--color-muted);
+}
+
+.attack-row {
+  display: grid;
+  gap: 0.35rem 1.25rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--color-line);
+}
+
+.verdict {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+}
+
+.verdict.is-held {
+  color: var(--color-teal-bright);
+}
+
+.verdict.is-detected {
+  color: var(--color-detect-amber);
+}
+
+.verdict.is-residual {
+  color: var(--color-hazard-red);
+}
+
+.verdict.is-partial {
+  color: var(--color-faint);
+}
+
+@media (min-width: 800px) {
+  .attack-row {
+    grid-template-columns: 8.5rem 1fr;
+    align-items: baseline;
+  }
+}
+
 .site-header {
   background: color-mix(in srgb, var(--color-navy) 92%, transparent);
 }

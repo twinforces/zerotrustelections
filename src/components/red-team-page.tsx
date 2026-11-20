@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { PageIntro } from "@/components/flow";
 import {
@@ -134,7 +135,11 @@ export function RedTeamPage() {
                 <li>Throw scenarios until you get a FAILURE or DETECTED card. Screenshot it or save the text.</li>
               </ol>
               <p className="mt-4 text-sm text-faint">
-                The session follows the public gist. The card is FAILURE, DETECTED, or DESIGN HELD.{" "}
+                The session follows the public gist. The card is FAILURE, DETECTED, or DESIGN HELD. The{" "}
+                <Link className="prose-link font-normal" to="/attacks">
+                  Attacks
+                </Link>{" "}
+                catalog grades known cases separately, including PARTIAL and RESIDUAL.{" "}
                 <a className="prose-link font-normal" href={BASELINE_GIST}>
                   Read the baseline
                 </a>

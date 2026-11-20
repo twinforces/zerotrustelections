@@ -8,10 +8,10 @@ Why: The design was one scrolling page, then the two flows needed diagrams. Clai
 
 How: TanStack Start app in this repo. Canonical source log is `src/content/receipts.ts`, rendered at `/receipts`. Profile mark is `public/grumpy.jpg`. Docs stay short on purpose.
 
-What: The home page sells from the reader's job, through the pain, to what this does and what they get.
+What: Attacks is a page. Known cases are graded HELD, DETECTED, RESIDUAL, or PARTIAL.
 
-Why: A description of the machinery is not an offer. The decks already had the offer.
+Why: The red-team card is three words. The catalog needs the cases that are only partly covered, and the ones that remain if custody fails.
 
-How: Home sections in that order. Receipt `home-sell` points at the gist and says the decks are the author's notes.
+How: `/attacks`, linked from the nav and the red-team page. Receipt `attacks-catalog`.
 
-Hash: 897ad23.
+Hash: pending this commit.

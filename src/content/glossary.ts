@@ -434,7 +434,7 @@ export const glossary: GlossaryEntry[] = [
     term: "Red-team card",
     short:
       "A red-team card is one of three labels, a scenario name, and exactly three short bullets.",
-    note: "FAILURE means the attacker got through and no independent signal is left. DETECTED means the attack had an effect and at least one signal still surfaces it. Knocking out one of the three counting signals is DETECTED when the other two still disagree. DESIGN HELD means the attack was prevented or made impractical. PARTIAL is retired. A hostile room is the assumption, not a failure.",
+    note: "FAILURE means the attacker got through and no independent signal is left. DETECTED means the attack had an effect and at least one signal still surfaces it. Knocking out one of the three counting signals is DETECTED when the other two still disagree. DESIGN HELD means the attack was prevented or made impractical. The red-team card does not use PARTIAL. The Attacks catalog does: PARTIAL means the design only covers part of the case, usually because too few people are checking. A hostile room is the assumption, not a failure.",
     category: "Zero-Trust & Audit",
     related: ["red-team", "grok", "three-way", "residual-risk"],
     aliases: ["FAILURE", "DETECTED", "DESIGN HELD", "PARTIAL", "failure card"],

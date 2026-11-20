@@ -69,3 +69,13 @@ What: Writing Elections.md from this workspace to retire the leftover PARTIAL li
 Why: The gist outcome list says DETECTED, but an earlier bullet still tells the session to print PARTIAL. Leaving that line makes red-team sessions ignore the rename.
 
 How: `github___update_gist` returned 403. The author updated the gist later the same day. PARTIAL is gone. Do not retry that write unless the gist drifts again.
+
+## 2026-11-20 attacks
+
+What: An Attacks page grades known cases HELD, DETECTED, RESIDUAL, or PARTIAL.
+
+Why: The catalog is not the red-team card. A session is still FAILURE, DETECTED, or DESIGN HELD. PARTIAL here means the design only covers part of the case.
+
+How: `src/content/attacks.ts` and `/attacks`. The receipt says the list is the author's catalog of 20 November 2026, not Elections.md.
+
+Hash: pending this commit.
