@@ -15,7 +15,7 @@ export type AttackGroup = {
 export const VERDICTS: { id: Verdict | "ALL"; label: string; means: string }[] = [
   { id: "ALL", label: "All", means: "" },
   { id: "PREVENT", label: "PREVENT", means: "Prevented, or impractical under the baseline." },
-  { id: "DETECTED", label: "DETECTED", means: "The attack can land, and a signal surfaces it. The statute then declares that election a mulligan and it is run again." },
+  { id: "DETECTED", label: "DETECTED", means: "The attack can land, and a signal surfaces it. A material, attributed detection authorizes a mulligan of the affected contest." },
   { id: "RESIDUAL", label: "RESIDUAL", means: "Still possible if the named controls are also defeated." },
   { id: "PARTIAL", label: "PARTIAL", means: "Limited by how many people are checking, or by a similar gap." },
 ];
@@ -127,7 +127,7 @@ export const attackGroups: AttackGroup[] = [
         name: "Supply-chain or firmware substitution",
         verdict: "DETECTED",
         handling:
-          "Risk-limiting audit and test ballots. The leftover case, an attacker who also controls the paper, is the same dystopia as sole custody. That is out of scope. The ordinary case is DETECTED, and the statute re-runs it.",
+          "Risk-limiting audit and test ballots. The leftover case, an attacker who also controls the paper, defeats the custody controls. That is the dystopia. The ordinary case is DETECTED, and a material detection authorizes a mulligan of that contest.",
       },
     ],
   },
@@ -139,7 +139,7 @@ export const attackGroups: AttackGroup[] = [
         name: "Sole control of production, issuance, and custody, with matching illegitimate paper",
         verdict: "RESIDUAL",
         handling:
-          "Only if one actor controls production, issuance, and custody, and the paper matches the lie. That is a dystopia. A clean election inside that room is out of scope.",
+          "Only if one actor controls production, issuance, and custody, and the paper matches the lie. That defeats the published custody controls. No design can guarantee a clean result there. The failure is named and litigated instead of silently certified.",
       },
       {
         name: "Seal bypass or container swap",
@@ -150,7 +150,7 @@ export const attackGroups: AttackGroup[] = [
         name: "Observer suppression",
         verdict: "RESIDUAL",
         handling:
-          "Same dystopia as sole custody. Suppressing the watchers is how the lie stays hidden. Out of scope, not a separate hole.",
+          "Same path as sole custody. Suppressing the watchers is how the lie stays hidden. No design guarantees a clean result. The violation is named instead of certified.",
       },
       {
         name: "Selective destruction, or a box called lost",
@@ -187,7 +187,7 @@ export const attackGroups: AttackGroup[] = [
         name: "Intimidation or swatting at the polls",
         verdict: "RESIDUAL",
         handling:
-          "A dystopia. If voters are being attacked at the polls, there is no election left to clean up. Out of scope, and outside the technical controls.",
+          "If voters are being attacked at the polls, there is no procedure left to trust. Outside the technical controls. Named and litigated, not certified as a clean count.",
       },
     ],
   },

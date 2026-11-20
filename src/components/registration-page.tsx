@@ -239,6 +239,20 @@ export function RegistrationPage() {
             own row. Modest checking is a <Term id="continuous-sample" />. Election day does not wait on a live
             nationwide write. A dispute becomes a <Term id="provisional-ballot" />.
           </li>
+          <li>
+            <strong>Check-in shows up on the phone.</strong> A successful <Term id="check-in" /> is written to
+            the ledger and shown immediately, with the time and place. An unexpected check-in can be flagged
+            while the election is open or during the cure window. Photo-swapped ID against people who never
+            look stays possible.
+          </li>
+          <li>
+            <strong>A provisional is visible, and it is only that record.</strong> It is written at cast time
+            and shown on that person's phone. A notice is mailed to the address on file before it is counted.
+            It stays out until a 7 to 10 day objection window, inside the normal cure period, closes. An
+            objection from the registrant keeps it out. Precinct counts and reason codes are published before
+            polls close. A rate well above that precinct's history adds it to the random challenge. A flag
+            investigates only that record. It never throws out a precinct or a race.
+          </li>
         </ul>
         <DiveList section="registration" />
         <PrimerList items={PRIMERS} />

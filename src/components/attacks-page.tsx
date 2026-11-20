@@ -82,21 +82,33 @@ export function AttacksPage() {
             and the provisional side door off a silent FAILURE. Photo-swap is PARTIAL, because people who
             never open the phone check are still exposed. The provisional side door is DETECTED.
           </p>
-          <h3 className="mt-10 font-serif text-2xl font-medium">A dystopia is out of scope.</h3>
+          <h3 className="mt-10 font-serif text-2xl font-medium">A dystopia is not silently certified.</h3>
           <p className="mt-4 max-w-3xl text-pretty text-muted">
-            Some RESIDUAL cases assume the room is no longer an election. One actor controls production,
-            issuance, and custody, and the paper matches the lie. Observers are suppressed so nobody sees it.
-            Voters are intimidated or swatted at the polls. A clean result inside that dystopia is not a
-            missing feature. It is out of scope. A poisoned oracle is not in that bucket. A bad death file can
-            happen in an ordinary jurisdiction, and the design still trusts the feed. That residual stays.
+            Some RESIDUAL cases assume the published custody, observation, and challenge controls have been
+            defeated. One actor controls production, issuance, and custody, and the paper matches the lie.
+            Observers are suppressed so nobody sees it. Voters are intimidated or swatted at the polls. No
+            technical design can guarantee a clean result there. The 20 November baseline does not ignore
+            that. The sample and the attribution exist so the failure is named and litigated, and, where the
+            mulligan statute applies, re-run at the perpetrators' expense instead of certified. Ordinary
+            operation is judged against the controls as written. A poisoned oracle is not in that bucket. A
+            bad death file can happen in an ordinary jurisdiction, and the design still trusts the feed.
           </p>
-          <h3 className="mt-10 font-serif text-2xl font-medium">A detection is a mulligan.</h3>
+          <h3 className="mt-10 font-serif text-2xl font-medium">A detection can void the contest.</h3>
           <p className="mt-4 max-w-3xl text-pretty text-muted">
-            If a signal surfaces an attack, the statute declares that election void and it is run again. Real
-            law is strangely averse to this. It tries to repair a tainted count in place. That is the harder
-            problem, and this design refuses it. <Term id="principle-mulligan">Detection is useful</Term>{" "}
-            because the remedy is a re-run, not a reconstruction. The dystopia cases are not fixed by a
-            re-run. There is no honest election left to repeat.
+            A material, attributed detection authorizes the authority for that contest to declare a{" "}
+            <Term id="principle-mulligan">mulligan</Term>. The triggers are a reconciliation failure, an
+            aggregate anomaly above threshold, a provisional rate that trips the challenge, an
+            observer-documented control violation, or a risk-limiting audit that expands to a full count. The
+            contest is re-run on a short timetable with the same paper and custody rules. The perpetrators are
+            jointly and severally liable for twice the full cost. Real law is strangely averse to this. It
+            tries to repair a tainted count in place. That is the harder problem.
+          </p>
+          <p className="mt-4 max-w-3xl text-pretty text-muted">
+            <Term id="principle-detection">Detection is the goal</Term>, not perfect prevention against
+            someone who also defeats the custody controls. Once the attack has a name, the officials can be
+            removed, prosecuted, jailed through the next cycle, and barred from running elections again. Where
+            statute allows, they can be barred from voting. The fine is twice the re-run. Someone who can
+            mount the attack can pay for it.
           </p>
           <p className="mt-4 max-w-3xl text-pretty text-muted">
             This list is the author's catalog. It is not a finished red-team log, and it is not proof the

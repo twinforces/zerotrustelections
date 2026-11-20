@@ -99,3 +99,13 @@ Why: Some RESIDUAL cases assume the room is no longer an election. Repairing a t
 How: Attacks, Counting, the two counting dives, the red-team DETECTED line, and a glossary principle. A poisoned oracle stays a residual. Receipt `mulligan` says this is not in the gist.
 
 Hash: 9a4aba8.
+
+## 2026-11-20 baseline
+
+What: The site follows Elections.md version 2026-11-20, gist revision 5830600.
+
+Why: The author pasted the new baseline so a cached raw URL would not be the design. The mulligan, the custody controls, the phone acknowledgements, and "detection is sufficient" are now in the gist.
+
+How: The red-team link fetches that revision. Counting has a custody section. Registration states the check-in and provisional rules. Receipts no longer say the mulligan is missing from the gist. One operating bullet still paints DETECTED in the same dark red as FAILURE. The image rules, and this site, keep it amber.
+
+Hash: pending this commit.

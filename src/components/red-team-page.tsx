@@ -31,8 +31,8 @@ export function RedTeamPage() {
               <dt className="text-xs font-semibold tracking-widest text-detect-amber uppercase">Detected</dt>
               <dd className="mt-2 text-sm text-pretty text-muted">
                 The attack has an effect, and at least one signal still shows it. Take out the scanner. Paper
-                and check-ins still match each other and not the machine. The statute does not repair that
-                total. It declares a mulligan and the election is run again.
+                and check-ins still match each other and not the machine. A material detection authorizes a
+                mulligan of that contest. The total is not repaired in place.
               </dd>
             </div>
             <div>

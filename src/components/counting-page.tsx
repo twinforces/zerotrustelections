@@ -30,6 +30,7 @@ export function CountingPage() {
           <a href="#reconcile">Reconcile</a>
           <a href="#constant">Constant</a>
           <a href="#audit">Audit</a>
+          <a href="#custody">Custody</a>
         </nav>
       </PageIntro>
 
@@ -81,7 +82,13 @@ export function CountingPage() {
               <Term id="cast-as-intended" /> before it goes in the box.
             </li>
             <li>
-              <strong>Ordinary receipts stay private.</strong> Looking is not the same as publishing.
+              <strong>After it is cast.</strong> The phone may show the checksum recorded for that ballot ID.
+              <CryptoFairy /> A public list of cast checksums is published, so the voter can see that theirs
+              is there. The app cannot make a valid checksum before the ballot is cast and the ID is known.
+            </li>
+            <li>
+              <strong>Ordinary receipts stay private.</strong> Looking is not the same as publishing who you
+              voted for. The public list is checksums, not names.
             </li>
           </ol>
         </div>
@@ -110,8 +117,9 @@ export function CountingPage() {
               <p className="step-n">Ordinary voter</p>
               <p className="step-title">Receipt stays private</p>
               <p className="step-text">
-                The checksum, if they compute one, never has to leave the phone.
-                <CryptoFairy /> Secrecy is the default.
+                The checksum, if they compute one, never has to name them. A public list of checksums lets
+                them confirm theirs appears.
+                <CryptoFairy /> Secrecy of the choice is the default.
               </p>
             </div>
             <div className="fork-arm is-public">
@@ -133,8 +141,10 @@ export function CountingPage() {
         lede={
           <>
             At close, <Term id="check-in">check-ins</Term>, paper secured, and the{" "}
-            <Term id="scanner-total" /> are <Term id="three-way">reconciled</Term>. Captains from both sides
-            can watch the arithmetic. Their notes do not replace it.
+            <Term id="scanner-total" /> are <Term id="three-way">reconciled</Term>. A check-in is also written
+            to that voter's phone, with the time and place, so an unexpected one can be flagged while the
+            election is open or during the cure window. Captains from both sides can watch the arithmetic.
+            Their notes do not replace it.
           </>
         }
       >
@@ -145,7 +155,7 @@ export function CountingPage() {
             { figure: "Paper", title: "Ballots secured", text: "Physical paper in the box. This is the record." },
             { figure: "Scanner", title: "Electronic total", text: "What the machines say the paper said." },
           ]}
-          note="Check-ins ≈ paper ≈ scanner. Knock out one of those three and the other two still disagree. That is detection, not a failed design. The card is a real failure only when all three were moved together, so nothing is left to disagree. That limit is named below."
+          note="Check-ins ≈ paper ≈ scanner. Knock out one of those three and the other two still disagree. That is detection, not a failed design. A material gap authorizes a mulligan of that contest. The card is a real failure only when all three were moved together, so nothing is left to disagree. That limit is named below."
         />
       </FlowBlock>
 
@@ -206,6 +216,49 @@ export function CountingPage() {
         />
       </FlowBlock>
 
+      <FlowBlock
+        id="custody"
+        n="06 / The box changes hands"
+        title="One person does not both issue the paper and keep it."
+        lede={
+          <>
+            These <Term id="chain-of-custody" /> controls do not make a sole-custody attack impossible. They
+            move it outside normal procedure, so the public sample can see the violation before certification.
+          </>
+        }
+      >
+        <Steps
+          label="Paper-custody controls"
+          items={[
+            {
+              title: "Roles split",
+              text: "The same person, or an unchecked team, may not both produce or issue ballots and hold sole custody through tabulation. An opposing-party or independent observer is present for issuance and for the hand-off.",
+            },
+            {
+              title: "If they cannot split, they film it",
+              text: "A site that cannot separate the roles live-streams, or immediately publishes, video of issuance, seal application, and container opening.",
+            },
+            {
+              title: "Two parties seal the box",
+              text: "Containers leave under seals controlled by two different parties, or by an official and an observer. Opening needs both.",
+            },
+            {
+              title: "The issued count is public before close",
+              text: (
+                <>
+                  The number of ballots issued per precinct is published, or hash-committed, before polls close.
+                  <CryptoFairy /> Provisional counts and reason codes go out with that same commitment.
+                </>
+              ),
+            },
+            {
+              title: "A random set of precincts is pulled",
+              text: "A public-random subset is selected for an immediate off-site hand count, or a transfer to different custody, before the main tabulation. A provisional rate well above that precinct's history adds it to the draw.",
+            },
+          ]}
+        />
+      </FlowBlock>
+
       <Tail>
         <h2 className="font-serif text-3xl font-medium">What the observers are for</h2>
         <p className="mt-4 max-w-3xl text-pretty text-muted">
@@ -217,12 +270,14 @@ export function CountingPage() {
         <DiveList section="counting" />
         <PrimerList items={PRIMERS} />
         <Limit>
-          Full control of ballot production, issuance, and <Term id="chain-of-custody" />, plus suppressed
-          observers, can still insert matching illegitimate paper. That is a dystopia. A recount would confirm
-          the stuffed paper, because the paper is the lie. A clean election inside that room is out of scope.
-          If the stuffing is detected, because the paper does not match, the statute does not repair the
-          total. It declares a <Term id="principle-mulligan">mulligan</Term> and the election is run again.
-          Errors under the risk limit can remain.
+          Defeating the published custody, observation, and challenge controls is a dystopia. No technical
+          design can guarantee a clean result there. The sample and the attribution exist so the failure is
+          named and litigated, and, where the <Term id="principle-mulligan">mulligan</Term> statute applies,
+          re-run at the perpetrators' expense instead of silently certified. Ordinary operation is judged
+          against the controls as written. Errors under the risk limit can remain. Oracles stay trusted. Very
+          few people checking slows detection. A material, attributed detection also carries{" "}
+          <Term id="principle-detection">consequences that outlast the election</Term>: removal, prosecution,
+          and a fine of twice the re-run.
         </Limit>
       </Tail>
     </article>

@@ -308,10 +308,11 @@ export const dives: Dive[] = [
         <h2>What it does not do</h2>
         <p>
           Errors small enough to fall under the risk limit can remain. And if the paper was replaced with a
-          consistent illegitimate set, the RLA will confirm that set. That replacement is a dystopia, and a
-          clean election inside it is out of scope. <Term id="chain-of-custody" /> and the three-way check are
-          what stand in front of that <Term id="residual-risk" />. If they disagree, the statute does not
-          repair the total. It declares a <Term id="principle-mulligan">mulligan</Term>. The audit is not a
+          consistent illegitimate set, the RLA will confirm that set. That replacement means the custody
+          controls were defeated. No design can guarantee a clean result there. The failure is named and
+          litigated instead of silently certified. <Term id="chain-of-custody" /> and the three-way check are
+          what stand in front of that <Term id="residual-risk" />. If they disagree, a material detection
+          authorizes a <Term id="principle-mulligan">mulligan</Term> of the contest. The audit is not a
           substitute for custody.
         </p>
       </>
@@ -347,9 +348,10 @@ export const dives: Dive[] = [
         <p>
           Observers who are excluded, or a precinct nobody watches, drop out of the{" "}
           <Term id="continuous-sample" />. The residual is not "captains might lie." The residual is "nobody
-          was allowed to look, and the paper was already wrong when it left." That is a dystopia, and it is
-          out of scope. If someone was allowed to look and the signals disagree, the remedy is a{" "}
-          <Term id="principle-mulligan">mulligan</Term>, not a repaired total.
+          was allowed to look, and the paper was already wrong when it left." That defeats the custody and
+          observation controls. It is named and litigated, not certified as clean. If someone was allowed to
+          look and the signals disagree, a material detection authorizes a{" "}
+          <Term id="principle-mulligan">mulligan</Term> of the contest, not a repaired total.
         </p>
       </>
     ),

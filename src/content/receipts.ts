@@ -16,7 +16,7 @@ export type ReceiptGroup = {
 
 const GIST = "https://gist.github.com/twinforces/d99236e3da06118ee14506f6979997e5";
 const GIST_RAW =
-  "https://gist.githubusercontent.com/twinforces/d99236e3da06118ee14506f6979997e5/raw";
+  "https://gist.githubusercontent.com/twinforces/d99236e3da06118ee14506f6979997e5/raw/5830600e469c913b3813deaca61a70fb8247672c/Elections.md";
 
 export const receipts: ReceiptGroup[] = [
   {
@@ -26,12 +26,12 @@ export const receipts: ReceiptGroup[] = [
     items: [
       {
         id: "gist",
-        claim: "The design baseline is the public gist Elections.md, version 2026-11-13.",
+        claim: "The design baseline is the public gist Elections.md, version 2026-11-20.",
         appears: "Footer, Red Team, and every flow that says it follows the baseline.",
         source: "twinforces/Elections.md",
         href: GIST,
         supports:
-          "Fetched again on 13 November 2026. Registration, counting, principles, residual risks, and the red-team card rules are in that file. The raw URL is what the Grok session is told to fetch.",
+          "Re-read from the author's paste on 20 November 2026, then confirmed against gist revision 5830600e469c913b3813deaca61a70fb8247672c. The red-team link fetches that revision, not the unpinned raw URL, so a cached older copy is not the session. Registration, counting, custody controls, the mulligan statute, residual risks, and the card rules are in that file.",
       },
       {
         id: "gist-raw",
@@ -40,7 +40,7 @@ export const receipts: ReceiptGroup[] = [
         source: "Raw gist",
         href: GIST_RAW,
         supports:
-          "The button uses the grok.com/?q= form specified for this site. The query tells Grok to fetch this raw URL and follow it. A change on the website does not change the session until the gist changes.",
+          "The button uses the grok.com/?q= form. The query tells Grok to fetch revision 5830600e469c913b3813deaca61a70fb8247672c, not the unpinned raw URL. A change on the website does not change the session. A later gist edit does not either, until this pin is moved.",
       },
       {
         id: "session",
@@ -67,16 +67,16 @@ export const receipts: ReceiptGroup[] = [
         source: "Author's attack catalog, 20 November 2026",
         href: GIST,
         supports:
-          "The list was supplied for the site that day. It is not in Elections.md. Check-in acknowledgement and provisional acknowledgement are named there as the reason photo-swap and the provisional side door are no longer a silent FAILURE. The gist still scores a session as FAILURE, DETECTED, or DESIGN HELD. The catalog is not a finished red-team log.",
+          "The list of cases was supplied for the site. The four grades are the catalog, not the card labels. Check-in acknowledgement and provisional acknowledgement are in the 20 November baseline. The gist still scores a session as FAILURE, DETECTED, or DESIGN HELD. The catalog is not a finished red-team log.",
       },
       {
         id: "mulligan",
-        claim: "A surfaced attack is a statutory mulligan. A dystopia, where the paper itself is the lie or the polls are under attack, is out of scope.",
+        claim: "A material, attributed detection authorizes a mulligan of the affected contest. Defeating the custody controls is a dystopia the design cannot guarantee clean.",
         appears: "Attacks, Counting, the risk-limiting audit dive, local observers, Red Team, and the glossary.",
-        source: "Author instruction, 20 November 2026",
+        source: "Elections.md, version 2026-11-20, detected-attack mulligan and known residual risks",
         href: GIST,
         supports:
-          "This is not in Elections.md. The author added two rules that day. If a signal surfaces an attack, statute declares that election void and it is run again, because repairing a tainted count is the harder problem and real law is averse to a re-run. Sole custody with matching illegitimate paper, observer suppression, and intimidation at the polls assume a dystopia. A clean election there is out of scope. A poisoned oracle is not in that bucket.",
+          "The 20 November baseline says a reconciliation failure, an aggregate anomaly above threshold, a provisional-rate trigger, an observer-documented control violation, or a risk-limiting audit that expands to a full count authorizes the authority for that contest to declare a mulligan. The re-run uses the same paper and custody controls, on a compressed timetable. Perpetrators are jointly and severally liable for twice the full cost. Residuals that require defeating the published custody, observation, and challenge controls are dystopia cases. No technical design can guarantee a clean result there. They are named, litigated, and, where the statute applies, re-run at the perpetrators' expense instead of silently certified. A poisoned oracle stays a trusted input.",
       },
     ],
   },
@@ -280,19 +280,19 @@ export const receipts: ReceiptGroup[] = [
       },
       {
         id: "custody",
-        claim: "If one group controls production, issuance, and custody, and keeps observers out, a recount and the audit can both confirm a stuffed box.",
-        appears: "Counting known limit. Red Team FAILURE card.",
-        source: "Elections.md, known residual risks",
+        claim: "Defeating the published custody, observation, and challenge controls can still produce matching illegitimate paper. The design names that failure. It does not promise a clean result.",
+        appears: "Counting custody section and known limit. Red Team FAILURE card.",
+        source: "Elections.md, version 2026-11-20, paper-custody controls and known residual risks",
         href: GIST,
         supports:
-          "The gist states this residual in those words. The FAILURE card on the site is an illustration of that residual, not a new finding.",
+          "The baseline requires role separation, a live-video fallback, dual-control seals, an early public commitment of ballots issued, and an external random challenge. It says those rules do not make sole-custody attacks impossible. The FAILURE card is an illustration of the case where check-ins, paper, and the scanner were moved together, not a new finding.",
       },
     ],
   },
   {
     id: "scoring",
     title: "Red-team cards",
-    note: "Re-fetched 13 November 2026. PARTIAL is gone. The middle label is DETECTED. One operating bullet still paints FAILURE and DETECTED in the same dark red style. The image rules, and this site, keep DETECTED amber.",
+    note: "Re-read 20 November 2026, revision 5830600. PARTIAL is still absent from the card labels. One operating bullet still paints FAILURE and DETECTED in the same dark red style. The image rules, and this site, keep DETECTED amber.",
     items: [
       {
         id: "labels",

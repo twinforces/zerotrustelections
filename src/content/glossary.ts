@@ -188,7 +188,7 @@ export const glossary: GlossaryEntry[] = [
     term: "Provisional ballot",
     short:
       "A provisional ballot is a ballot set aside on election day and counted, or not, only after a later eligibility check.",
-    note: "Roll changes are deliberately slow, on the order of months. An election-day dispute does not rewrite the ledger in the polling place. It becomes a provisional ballot resolved against the audited log.",
+    note: "Roll changes are deliberately slow, on the order of months. An election-day dispute does not rewrite the ledger in the polling place. The provisional is recorded at cast time, shown on that person's phone, and a notice is mailed to the address on file before it is counted. It stays out of the count until a 7 to 10 day objection window, inside the normal cure period, closes. An objection from the registrant keeps it out. A flag investigates only that record. It never excludes a precinct or a race.",
     category: "Registration",
     related: ["cap", "personal-view", "paper-ballot"],
     aliases: ["provisional"],
@@ -236,7 +236,7 @@ export const glossary: GlossaryEntry[] = [
     id: "check-in",
     term: "Check-in",
     short: "A check-in is the record that a voter was issued a ballot at a polling place or equivalent site.",
-    note: "It is one leg of the three-way reconciliation. Extra paper with no matching check-ins, or check-ins with no paper, is the signal.",
+    note: "It is one leg of the three-way reconciliation. Extra paper with no matching check-ins, or check-ins with no paper, is the signal. On a successful check-in the phone shows the time and place. An unexpected check-in can be flagged while the election is open or during the cure window.",
     category: "Counting",
     related: ["three-way", "scanner-total", "paper-ballot"],
     aliases: ["ballots issued", "poll book"],
@@ -355,7 +355,7 @@ export const glossary: GlossaryEntry[] = [
     term: "Chain of custody",
     short:
       "Chain of custody is the documented handling of ballots from printing and issuance through transport, storage, and audit.",
-    note: "The known residual risk: if one group controls production, issuance, and custody, and keeps observers out, it can insert matching illegitimate paper. A later recount and risk-limiting audit will then agree with the stuffed box.",
+    note: "Required controls: the same person may not both issue ballots and hold sole custody; if a site cannot split those roles it films issuance, sealing, and opening; seals are dual-control; the issued count is published or hash-committed before polls close; a public-random subset of precincts is pulled for an immediate hand count or a custody transfer. Defeating those controls is a dystopia. No design can guarantee a clean result there. The failure is named and litigated instead of silently certified.",
     category: "Counting",
     related: ["paper-ballot", "three-way", "residual-risk", "rla"],
     aliases: ["custody", "ballot box"],
@@ -424,7 +424,7 @@ export const glossary: GlossaryEntry[] = [
     term: "Residual risk",
     short:
       "A residual risk is a way the design can still fail after its checks are working as specified.",
-    note: "Named limits: a dystopia in which one actor controls ballot production, issuance, and custody and can suppress observers, so the paper matches the lie; intimidation that stops the polls from being an election; trusted oracles; errors under the risk limit; and very low checker density. The dystopia cases are out of scope. A poisoned oracle is not one of them. A bad feed can exist in an ordinary jurisdiction.",
+    note: "Named limits: defeating the published paper-custody, observation, and challenge controls, which the baseline treats as a dystopia because no technical design can guarantee a clean result there; intimidation that stops the polls from being an election; trusted oracles; errors under the risk limit; and very low checker density. The dystopia is named, litigated, and, where the mulligan statute applies, re-run at the perpetrators' expense instead of silently certified. A poisoned oracle is not a dystopia. A bad feed can exist in an ordinary jurisdiction. Ordinary operation is judged against the controls as written.",
     category: "Zero-Trust & Audit",
     related: ["chain-of-custody", "risk-limit", "oracle", "continuous-sample"],
     aliases: ["residual", "known limits"],
@@ -513,11 +513,21 @@ export const glossary: GlossaryEntry[] = [
     id: "principle-mulligan",
     term: "A detected attack is a mulligan",
     short:
-      "This principle says that if a signal surfaces an attack, statute declares that election void and it is run again.",
-    note: "Real election law is strangely averse to this. It tries to repair a tainted count in place, which is the harder problem. The design refuses that repair. A dystopia is a different limit: if the paper matches the lie because one actor controls production, issuance, and custody, or voters are being attacked at the polls, there is no honest election left to re-run. That case is out of scope, not a mulligan.",
+      "This principle says a material, attributed detection authorizes the authority for that contest to void it and run it again.",
+    note: "The triggers are a reconciliation failure, an aggregate anomaly above threshold, a provisional-rate trigger, an observer-documented control violation, or a risk-limiting audit discrepancy that expands to a full count. The contest is re-run on a compressed timetable with the same paper and custody controls. The perpetrators are jointly and severally liable for twice the full cost. Real election law is strangely averse to this. It tries to repair a tainted count in place. A dystopia, where the paper matches the lie because the custody controls were defeated, cannot be guaranteed clean. It is named and litigated, and re-run at their expense where this statute applies, instead of silently certified.",
     category: "Principles",
     related: ["residual-risk", "failure-card", "principle-litigation"],
     aliases: ["mulligan", "re-run", "rerun"],
+  },
+  {
+    id: "principle-detection",
+    term: "Detection is sufficient",
+    short:
+      "This principle says the goal is timely, attributable detection, not perfect prevention against someone who also defeats the paper-custody controls.",
+    note: "Once an attack is detected, the responsible officials can be prosecuted, removed, jailed through the next election cycle, and barred from running elections again. Where statute allows, they can also be barred from voting. They are fined twice the full cost of any re-run. Someone who can mount the attack can pay for it. The fine is a deterrent that scales with the attack, and the names are on the ledger.",
+    category: "Principles",
+    related: ["principle-mulligan", "residual-risk", "append-only"],
+    aliases: ["deterrent", "twice the cost"],
   },
   {
     id: "principle-simple",
