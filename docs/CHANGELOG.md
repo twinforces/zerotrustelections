@@ -98,4 +98,4 @@ Why: Some RESIDUAL cases assume the room is no longer an election. Repairing a t
 
 How: Attacks, Counting, the two counting dives, the red-team DETECTED line, and a glossary principle. A poisoned oracle stays a residual. Receipt `mulligan` says this is not in the gist.
 
-Hash: pending this commit.
+Hash: 9a4aba8.

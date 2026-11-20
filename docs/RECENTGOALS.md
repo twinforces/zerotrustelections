@@ -14,4 +14,4 @@ Why: Sole custody with matching paper, suppressed observers, and intimidation ar
 
 How: Those residuals say so. DETECTED includes the re-run. Oracle poisoning stays a residual. Receipt `mulligan`.
 
-Hash: pending this commit.
+Hash: 9a4aba8.
