@@ -78,4 +78,4 @@ Why: The catalog is not the red-team card. A session is still FAILURE, DETECTED,
 
 How: `src/content/attacks.ts` and `/attacks`. The receipt says the list is the author's catalog of 20 November 2026, not Elections.md.
 
-Hash: pending this commit.
+Hash: 1adce94.
