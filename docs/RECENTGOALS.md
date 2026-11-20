@@ -14,4 +14,4 @@ Why: The pasted baseline is newer than the pages, and an unpinned raw URL can se
 
 How: Red-team link uses the revision. Custody, check-in acknowledgement, provisional window, mulligan triggers, and the detection deterrent are on the pages. Receipts cite the gist.
 
-Hash: pending this commit.
+Hash: 06b41e8.

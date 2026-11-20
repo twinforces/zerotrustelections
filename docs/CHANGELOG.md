@@ -108,4 +108,4 @@ Why: The author pasted the new baseline so a cached raw URL would not be the des
 
 How: The red-team link fetches that revision. Counting has a custody section. Registration states the check-in and provisional rules. Receipts no longer say the mulligan is missing from the gist. One operating bullet still paints DETECTED in the same dark red as FAILURE. The image rules, and this site, keep it amber.
 
-Hash: pending this commit.
+Hash: 06b41e8.
