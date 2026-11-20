@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { PageIntro } from "@/components/flow";
+import { Term } from "@/components/term";
 import { VERDICTS, attackGroups, type Verdict } from "@/content/attacks";
 
 const GRADES = VERDICTS.filter((item) => item.id !== "ALL");
@@ -76,15 +77,26 @@ export function AttacksPage() {
         <div className="mx-auto max-w-6xl px-5 py-12 sm:py-16">
           <h2 className="max-w-3xl font-serif text-3xl font-medium text-balance">What is left.</h2>
           <p className="mt-4 max-w-3xl text-pretty text-muted">
-            Most of the technical and historical attacks are PREVENT or DETECTED under the current baseline. The
-            RESIDUAL items are the sole-custody paper path, if those controls are defeated, and oracles that
-            the design trusts. Intimidation at the polls is residual because it is operational, not a bug in
-            the ledger.
-          </p>
-          <p className="mt-4 max-w-3xl text-pretty text-muted">
+            Most of the technical and historical attacks are PREVENT or DETECTED under the current baseline.
             Check-in acknowledgement and provisional acknowledgement are what moved photo-swap impersonation
             and the provisional side door off a silent FAILURE. Photo-swap is PARTIAL, because people who
             never open the phone check are still exposed. The provisional side door is DETECTED.
+          </p>
+          <h3 className="mt-10 font-serif text-2xl font-medium">A dystopia is out of scope.</h3>
+          <p className="mt-4 max-w-3xl text-pretty text-muted">
+            Some RESIDUAL cases assume the room is no longer an election. One actor controls production,
+            issuance, and custody, and the paper matches the lie. Observers are suppressed so nobody sees it.
+            Voters are intimidated or swatted at the polls. A clean result inside that dystopia is not a
+            missing feature. It is out of scope. A poisoned oracle is not in that bucket. A bad death file can
+            happen in an ordinary jurisdiction, and the design still trusts the feed. That residual stays.
+          </p>
+          <h3 className="mt-10 font-serif text-2xl font-medium">A detection is a mulligan.</h3>
+          <p className="mt-4 max-w-3xl text-pretty text-muted">
+            If a signal surfaces an attack, the statute declares that election void and it is run again. Real
+            law is strangely averse to this. It tries to repair a tainted count in place. That is the harder
+            problem, and this design refuses it. <Term id="principle-mulligan">Detection is useful</Term>{" "}
+            because the remedy is a re-run, not a reconstruction. The dystopia cases are not fixed by a
+            re-run. There is no honest election left to repeat.
           </p>
           <p className="mt-4 max-w-3xl text-pretty text-muted">
             This list is the author's catalog. It is not a finished red-team log, and it is not proof the

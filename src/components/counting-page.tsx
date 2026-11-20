@@ -218,8 +218,11 @@ export function CountingPage() {
         <PrimerList items={PRIMERS} />
         <Limit>
           Full control of ballot production, issuance, and <Term id="chain-of-custody" />, plus suppressed
-          observers, can still insert matching illegitimate paper. A recount and the risk-limiting audit then
-          confirm the stuffed result. Errors under the risk limit can remain.
+          observers, can still insert matching illegitimate paper. That is a dystopia. A recount would confirm
+          the stuffed paper, because the paper is the lie. A clean election inside that room is out of scope.
+          If the stuffing is detected, because the paper does not match, the statute does not repair the
+          total. It declares a <Term id="principle-mulligan">mulligan</Term> and the election is run again.
+          Errors under the risk limit can remain.
         </Limit>
       </Tail>
     </article>

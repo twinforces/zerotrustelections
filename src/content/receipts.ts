@@ -69,6 +69,15 @@ export const receipts: ReceiptGroup[] = [
         supports:
           "The list was supplied for the site that day. It is not in Elections.md. Check-in acknowledgement and provisional acknowledgement are named there as the reason photo-swap and the provisional side door are no longer a silent FAILURE. The gist still scores a session as FAILURE, DETECTED, or DESIGN HELD. The catalog is not a finished red-team log.",
       },
+      {
+        id: "mulligan",
+        claim: "A surfaced attack is a statutory mulligan. A dystopia, where the paper itself is the lie or the polls are under attack, is out of scope.",
+        appears: "Attacks, Counting, the risk-limiting audit dive, local observers, Red Team, and the glossary.",
+        source: "Author instruction, 20 November 2026",
+        href: GIST,
+        supports:
+          "This is not in Elections.md. The author added two rules that day. If a signal surfaces an attack, statute declares that election void and it is run again, because repairing a tainted count is the harder problem and real law is averse to a re-run. Sole custody with matching illegitimate paper, observer suppression, and intimidation at the polls assume a dystopia. A clean election there is out of scope. A poisoned oracle is not in that bucket.",
+      },
     ],
   },
   {

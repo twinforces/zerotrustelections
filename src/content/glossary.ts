@@ -424,7 +424,7 @@ export const glossary: GlossaryEntry[] = [
     term: "Residual risk",
     short:
       "A residual risk is a way the design can still fail after its checks are working as specified.",
-    note: "Named limits: full control of ballot production, issuance, and custody plus observer suppression; errors under the risk limit; trusted oracles; and very low checker density.",
+    note: "Named limits: a dystopia in which one actor controls ballot production, issuance, and custody and can suppress observers, so the paper matches the lie; intimidation that stops the polls from being an election; trusted oracles; errors under the risk limit; and very low checker density. The dystopia cases are out of scope. A poisoned oracle is not one of them. A bad feed can exist in an ordinary jurisdiction.",
     category: "Zero-Trust & Audit",
     related: ["chain-of-custody", "risk-limit", "oracle", "continuous-sample"],
     aliases: ["residual", "known limits"],
@@ -506,8 +506,18 @@ export const glossary: GlossaryEntry[] = [
       "This principle says lawsuits are assumed, so the record has to be explainable to a court that was not in the room.",
     note: "Attributed reversible changes, paper, and published arithmetic are there so a later fight has a file, not a recollection.",
     category: "Principles",
-    related: ["append-only", "paper-ballot", "soft-delete"],
+    related: ["append-only", "paper-ballot", "soft-delete", "principle-mulligan"],
     aliases: ["litigation", "court"],
+  },
+  {
+    id: "principle-mulligan",
+    term: "A detected attack is a mulligan",
+    short:
+      "This principle says that if a signal surfaces an attack, statute declares that election void and it is run again.",
+    note: "Real election law is strangely averse to this. It tries to repair a tainted count in place, which is the harder problem. The design refuses that repair. A dystopia is a different limit: if the paper matches the lie because one actor controls production, issuance, and custody, or voters are being attacked at the polls, there is no honest election left to re-run. That case is out of scope, not a mulligan.",
+    category: "Principles",
+    related: ["residual-risk", "failure-card", "principle-litigation"],
+    aliases: ["mulligan", "re-run", "rerun"],
   },
   {
     id: "principle-simple",

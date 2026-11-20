@@ -89,3 +89,13 @@ Why: HELD was the wrong word. The red-team card is still DESIGN HELD.
 How: The verdict id, the filter, and the copy that named the grade. DESIGN HELD was left alone.
 
 Hash: 96f9150.
+
+## 2026-11-20 scope
+
+What: A dystopia is out of scope. A surfaced attack is a statutory mulligan.
+
+Why: Some RESIDUAL cases assume the room is no longer an election. Repairing a tainted count is the harder problem, and the design refuses it.
+
+How: Attacks, Counting, the two counting dives, the red-team DETECTED line, and a glossary principle. A poisoned oracle stays a residual. Receipt `mulligan` says this is not in the gist.
+
+Hash: pending this commit.

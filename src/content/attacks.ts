@@ -15,7 +15,7 @@ export type AttackGroup = {
 export const VERDICTS: { id: Verdict | "ALL"; label: string; means: string }[] = [
   { id: "ALL", label: "All", means: "" },
   { id: "PREVENT", label: "PREVENT", means: "Prevented, or impractical under the baseline." },
-  { id: "DETECTED", label: "DETECTED", means: "The attack can land, and a signal surfaces it." },
+  { id: "DETECTED", label: "DETECTED", means: "The attack can land, and a signal surfaces it. The statute then declares that election a mulligan and it is run again." },
   { id: "RESIDUAL", label: "RESIDUAL", means: "Still possible if the named controls are also defeated." },
   { id: "PARTIAL", label: "PARTIAL", means: "Limited by how many people are checking, or by a similar gap." },
 ];
@@ -53,7 +53,8 @@ export const attackGroups: AttackGroup[] = [
       {
         name: "Oracle or list-maintenance poisoning",
         verdict: "RESIDUAL",
-        handling: "The ledger records that the oracle was used. The oracle itself is trusted.",
+        handling:
+          "Not a dystopia. A bad death file can exist in an ordinary jurisdiction. The ledger records that the oracle was used. The oracle itself is trusted.",
       },
       {
         name: "Insider bulk roll edits",
@@ -125,7 +126,8 @@ export const attackGroups: AttackGroup[] = [
       {
         name: "Supply-chain or firmware substitution",
         verdict: "DETECTED",
-        handling: "Risk-limiting audit and test ballots. Residual only if the attacker also controls the paper.",
+        handling:
+          "Risk-limiting audit and test ballots. The leftover case, an attacker who also controls the paper, is the same dystopia as sole custody. That is out of scope. The ordinary case is DETECTED, and the statute re-runs it.",
       },
     ],
   },
@@ -136,7 +138,8 @@ export const attackGroups: AttackGroup[] = [
       {
         name: "Sole control of production, issuance, and custody, with matching illegitimate paper",
         verdict: "RESIDUAL",
-        handling: "Only if the paper-custody controls are defeated as well.",
+        handling:
+          "Only if one actor controls production, issuance, and custody, and the paper matches the lie. That is a dystopia. A clean election inside that room is out of scope.",
       },
       {
         name: "Seal bypass or container swap",
@@ -146,7 +149,8 @@ export const attackGroups: AttackGroup[] = [
       {
         name: "Observer suppression",
         verdict: "RESIDUAL",
-        handling: "This is part of the sole-custody path, not a separate technical hole.",
+        handling:
+          "Same dystopia as sole custody. Suppressing the watchers is how the lie stays hidden. Out of scope, not a separate hole.",
       },
       {
         name: "Selective destruction, or a box called lost",
@@ -182,7 +186,8 @@ export const attackGroups: AttackGroup[] = [
       {
         name: "Intimidation or swatting at the polls",
         verdict: "RESIDUAL",
-        handling: "Operational. Outside the technical controls.",
+        handling:
+          "A dystopia. If voters are being attacked at the polls, there is no election left to clean up. Out of scope, and outside the technical controls.",
       },
     ],
   },

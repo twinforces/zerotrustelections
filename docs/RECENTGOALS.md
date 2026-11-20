@@ -8,10 +8,10 @@ Why: The design was one scrolling page, then the two flows needed diagrams. Clai
 
 How: TanStack Start app in this repo. Canonical source log is `src/content/receipts.ts`, rendered at `/receipts`. Profile mark is `public/grumpy.jpg`. Docs stay short on purpose.
 
-What: Attacks is a page. Known cases are graded PREVENT, DETECTED, RESIDUAL, or PARTIAL.
+What: A dystopia is out of scope. A surfaced attack is a statutory mulligan.
 
-Why: The red-team card is three words. The catalog needs the cases that are only partly covered, and the ones that remain if custody fails.
+Why: Sole custody with matching paper, suppressed observers, and intimidation are not holes to close. A detection should void the election instead of repairing it.
 
-How: `/attacks`, linked from the nav and the red-team page. Receipt `attacks-catalog`.
+How: Those residuals say so. DETECTED includes the re-run. Oracle poisoning stays a residual. Receipt `mulligan`.
 
-Hash: 96f9150.
+Hash: pending this commit.
