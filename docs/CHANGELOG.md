@@ -88,4 +88,4 @@ Why: HELD was the wrong word. The red-team card is still DESIGN HELD.
 
 How: The verdict id, the filter, and the copy that named the grade. DESIGN HELD was left alone.
 
-Hash: pending this commit.
+Hash: 96f9150.

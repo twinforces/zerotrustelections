@@ -14,4 +14,4 @@ Why: The red-team card is three words. The catalog needs the cases that are only
 
 How: `/attacks`, linked from the nav and the red-team page. Receipt `attacks-catalog`.
 
-Hash: pending this commit.
+Hash: 96f9150.
