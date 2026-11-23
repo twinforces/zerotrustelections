@@ -109,3 +109,13 @@ Why: The author pasted the new baseline so a cached raw URL would not be the des
 How: The red-team link fetches that revision. Counting has a custody section. Registration states the check-in and provisional rules. Receipts no longer say the mulligan is missing from the gist. One operating bullet still paints DETECTED in the same dark red as FAILURE. The image rules, and this site, keep it amber.
 
 Hash: 06b41e8.
+
+## 2026-11-23 red team
+
+What: Four red-team failures are on the Attacks page as resolved.
+
+Why: Single-operator custody, the provisional side door, a lookalike emoji shirt, and a partisan marker were coming back as silent failures. The first three are closed by the 20 November baseline. Assisted marking was not named there.
+
+How: Single-operator custody is DETECTED because the broken procedure is the signal. The provisional side door is DETECTED by the acknowledgement, the mailed notice, and the objection. The shirt is PREVENT because the sequence is printed on the ballot. Assisted marking is DETECTED only if a second person is required. That last rule is the site's, and the receipt says the gist does not name it.
+
+Hash: pending this commit.

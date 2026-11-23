@@ -305,7 +305,7 @@ export const glossary: GlossaryEntry[] = [
     term: "Emoji sequence",
     short:
       "An emoji sequence is a unique mark for one candidate, part self-chosen and part party-assigned, printed on the ballot and on every campaign piece.",
-    note: "A uniqueness threshold and a banned list keep two candidates from sharing a mark. The sequence stops the Fake Dan Sullivan problem: similar or identical names can no longer be swapped by a confusing ballot. The same sequence is the visual half of the voter's checksum.",
+    note: "A uniqueness threshold and a banned list keep two candidates from sharing a mark, and keep a decoy from sitting visually next to the real one. The sequence is printed on the ballot, so a shirt is not the source of the mark. The sequence stops the Fake Dan Sullivan problem: similar or identical names can no longer be swapped by a confusing ballot. The same sequence is the visual half of the voter's checksum.",
     category: "Counting",
     related: ["fake-dan-sullivan", "commitment", "cast-as-intended", "canary"],
     aliases: ["emoji", "emoji sequence"],
@@ -325,7 +325,7 @@ export const glossary: GlossaryEntry[] = [
     term: "Cast as intended",
     short:
       "Cast as intended means the paper the voter deposits is the choice they meant to make.",
-    note: "A phone can compute the expected checksum from a voter identifier plus the candidate's emoji sequence. The voter compares that to the ballot before handing it in.",
+    note: "A phone can compute the expected checksum from a voter identifier plus the candidate's emoji sequence. The voter compares that to the ballot before handing it in. The checksum is optional, and it is not what stops a decoy shirt: the sequence is already printed on the ballot. A voter who cannot mark the ballot is not helped by one election worker. Assistance is the voter's own assistant, who is not staff, or a bipartisan pair.",
     category: "Counting",
     related: ["commitment", "emoji-sequence", "canary"],
     aliases: ["cast-as-intended"],

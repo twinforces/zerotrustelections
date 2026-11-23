@@ -87,6 +87,11 @@ export function CountingPage() {
               is there. The app cannot make a valid checksum before the ballot is cast and the ID is known.
             </li>
             <li>
+              <strong>Help is not one worker.</strong> A voter who cannot mark the ballot uses an assistant who
+              is not election staff, or a bipartisan pair. One partisan worker marking it alone is a control
+              violation. An observer on site can see that it happened without reading the vote.
+            </li>
+            <li>
               <strong>Ordinary receipts stay private.</strong> Looking is not the same as publishing who you
               voted for. The public list is checksums, not names.
             </li>

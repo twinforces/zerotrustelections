@@ -48,7 +48,8 @@ export const attackGroups: AttackGroup[] = [
       {
         name: "Provisional side-door impersonation",
         verdict: "DETECTED",
-        handling: "Provisional acknowledgement, the objection window, and a rate trigger.",
+        handling:
+          "Red team, resolved. Photo-swapped ID is used on purpose so the check-in acknowledgement never fires. The provisional is recorded at cast time, shown on that person's phone, and a notice is mailed before it can count. An objection keeps that ballot out. A rate above the precinct's history adds it to the random challenge. The totals still match, because the paper is a real provisional. The signal is the acknowledgement and the objection, not a mismatch.",
       },
       {
         name: "Oracle or list-maintenance poisoning",
@@ -91,6 +92,18 @@ export const attackGroups: AttackGroup[] = [
         name: "Memory-card or firmware malware on scanners",
         verdict: "DETECTED",
         handling: "Injected test ballots, the risk-limiting audit, and reconciliation.",
+      },
+      {
+        name: "Lookalike emoji shirt",
+        verdict: "PREVENT",
+        handling:
+          "Red team, resolved. The official sequence is printed on the ballot next to the name. The voter does not copy a sequence off a shirt. A uniqueness threshold and a banned list keep two official sequences from being near copies. The optional checksum is not the control. The audit counts the printed line that was marked.",
+      },
+      {
+        name: "Partisan assisted marking",
+        verdict: "DETECTED",
+        handling:
+          "Red team, resolved. Help marking a ballot cannot be one election worker. The voter uses an assistant who is not staff, or a bipartisan pair. One partisan worker marking it alone is a control violation an on-site observer can see without reading the vote. The paper will match that mark. The signal is the violation. If no observer is allowed in the room at all, that is the existing custody residual, not this case.",
       },
       {
         name: "Internet or remote voting compromise",
@@ -140,6 +153,12 @@ export const attackGroups: AttackGroup[] = [
         verdict: "RESIDUAL",
         handling:
           "Only if one actor controls production, issuance, and custody, and the paper matches the lie. That defeats the published custody controls. No design can guarantee a clean result there. The failure is named and litigated instead of silently certified.",
+      },
+      {
+        name: "Single-operator paper custody",
+        verdict: "DETECTED",
+        handling:
+          "Red team, resolved. Normal procedure no longer lets one office produce, issue, and keep the paper alone. Roles are split, or the site films issuance, sealing, and opening. Seals are dual-control. The issued count is public before close. A random set of precincts is pulled. Breaking that procedure is a visible control violation before certification, and it authorizes a mulligan. The totals matching is expected if the paper was swapped. The signal is the broken procedure. Defeating the video, the seals, and the challenge as well is the sole-custody residual above, not this case.",
       },
       {
         name: "Seal bypass or container swap",

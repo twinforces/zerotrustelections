@@ -78,6 +78,15 @@ export const receipts: ReceiptGroup[] = [
         supports:
           "The 20 November baseline says a reconciliation failure, an aggregate anomaly above threshold, a provisional-rate trigger, an observer-documented control violation, or a risk-limiting audit that expands to a full count authorizes the authority for that contest to declare a mulligan. The re-run uses the same paper and custody controls, on a compressed timetable. Perpetrators are jointly and severally liable for twice the full cost. Residuals that require defeating the published custody, observation, and challenge controls are dystopia cases. No technical design can guarantee a clean result there. They are named, litigated, and, where the statute applies, re-run at the perpetrators' expense instead of silently certified. A poisoned oracle stays a trusted input.",
       },
+      {
+        id: "red-team-four",
+        claim: "Four red-team failures are resolved: single-operator custody, the provisional side door, a lookalike emoji shirt, and partisan assisted marking.",
+        appears: "Attacks. Counting states the assistance rule. The glossary states the shirt and the assistance rule.",
+        source: "Red-team cases supplied 23 November 2026, read against Elections.md version 2026-11-20",
+        href: GIST,
+        supports:
+          "Single-operator custody and the provisional side door are closed by controls already in the 20 November baseline: role split or video, dual seals, the early commitment, the random challenge, the provisional acknowledgement, the mailed notice, the objection window, and the rate trigger. The lookalike shirt is closed by the printed sequence plus the uniqueness threshold, which the baseline already requires. Assisted marking is not named in the gist. The site closes it by forbidding a single election worker to mark the ballot. One partisan worker doing it is a control violation an observer can see without reading the vote. If the observer is also removed, that is the existing custody residual, not a new hole.",
+      },
     ],
   },
   {
