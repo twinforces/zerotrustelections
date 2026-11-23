@@ -14,4 +14,4 @@ Why: They were coming back as silent successes. Three are already closed by the 
 
 How: Custody, provisional acknowledgement, and the printed emoji sequence close the first three. A single election worker may not mark a ballot. Receipt `red-team-four`.
 
-Hash: pending this commit.
+Hash: 80f6efc.
