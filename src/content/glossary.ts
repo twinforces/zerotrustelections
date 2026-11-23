@@ -305,7 +305,7 @@ export const glossary: GlossaryEntry[] = [
     term: "Emoji sequence",
     short:
       "An emoji sequence is a unique mark for one candidate, part self-chosen and part party-assigned, printed on the ballot and on every campaign piece.",
-    note: "A uniqueness threshold and a banned list keep two candidates from sharing a mark, and keep a decoy from sitting visually next to the real one. The sequence is printed on the ballot, so a shirt is not the source of the mark. The sequence stops the Fake Dan Sullivan problem: similar or identical names can no longer be swapped by a confusing ballot. The same sequence is the visual half of the voter's checksum.",
+    note: "A uniqueness threshold and a banned list keep two candidates from sharing a mark, and keep a decoy from sitting visually next to the real one. The official sequence is printed on the ballot and published before election day in high-contrast shape-plus-text form at the polling place and in the phone app. Making or handing out a lookalike or non-official sequence is a criminal offense: a fine, and possible disqualification from running elections. The sequence stops the Fake Dan Sullivan problem: similar or identical names can no longer be swapped by a confusing ballot. The same sequence is the visual half of the voter's checksum.",
     category: "Counting",
     related: ["fake-dan-sullivan", "commitment", "cast-as-intended", "canary"],
     aliases: ["emoji", "emoji sequence"],
@@ -325,7 +325,7 @@ export const glossary: GlossaryEntry[] = [
     term: "Cast as intended",
     short:
       "Cast as intended means the paper the voter deposits is the choice they meant to make.",
-    note: "A phone can compute the expected checksum from a voter identifier plus the candidate's emoji sequence. The voter compares that to the ballot before handing it in. The checksum is optional, and it is not what stops a decoy shirt: the sequence is already printed on the ballot. A voter who cannot mark the ballot is not helped by one election worker. Assistance is the voter's own assistant, who is not staff, or a bipartisan pair.",
+    note: "A phone can compute the expected checksum from a voter identifier plus the candidate's emoji sequence. The voter compares that to the ballot before handing it in. After the ballot is cast, an audio rendering of the recorded checksum is archived for the voter. The checksum is optional, and it is not what stops a decoy shirt. Assisted marking requires observers from both major parties, or one party observer plus an independent. A personal assistant may not be the sole marker unless those observers are also present. The ledger records who marked it and who watched.",
     category: "Counting",
     related: ["commitment", "emoji-sequence", "canary"],
     aliases: ["cast-as-intended"],
@@ -335,7 +335,7 @@ export const glossary: GlossaryEntry[] = [
     term: "Checksum / commitment",
     short:
       "A checksum, also called a commitment, is a short fingerprint of a choice. The emoji sequence is the part a person can see.",
-    note: "Ordinary voters keep the receipt private. A public canary publishes theirs. The phone check is optional. Secrecy is the default, not a rule that every observer must follow.",
+    note: "Ordinary voters keep the receipt private. A public canary publishes theirs. The phone check is optional. After the ballot is cast, an audio rendering of the recorded checksum, and optionally the emoji sequence, is archived for the voter in the app, on mailed media, or by phone playback. It cannot be generated before the ballot ID is known. Secrecy is the default, not a rule that every observer must follow.",
     category: "Counting",
     related: ["cast-as-intended", "canary", "emoji-sequence", "fake-dan-sullivan"],
     aliases: ["checksum", "receipt", "commitment"],

@@ -8,10 +8,10 @@ Why: The design was one scrolling page, then the two flows needed diagrams. Clai
 
 How: TanStack Start app in this repo. Canonical source log is `src/content/receipts.ts`, rendered at `/receipts`. Profile mark is `public/grumpy.jpg`. Docs stay short on purpose.
 
-What: Four red-team failures are resolved on the Attacks page.
+What: The site matches Elections.md version 2026-11-23, gist revision 89bad82.
 
-Why: They were coming back as silent successes. Three are already closed by the 20 November baseline. Assisted marking was not.
+Why: This morning's gist added assisted marking, decoy-emoji penalties, and an audio checksum. The old pin would have kept serving 20 November.
 
-How: Custody, provisional acknowledgement, and the printed emoji sequence close the first three. A single election worker may not mark a ballot. Receipt `red-team-four`.
+How: Red-team link, counting, the two attack rows, the glossary, and the receipts.
 
-Hash: 80f6efc.
+Hash: pending this commit.

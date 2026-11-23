@@ -119,3 +119,13 @@ Why: Single-operator custody, the provisional side door, a lookalike emoji shirt
 How: Single-operator custody is DETECTED because the broken procedure is the signal. The provisional side door is DETECTED by the acknowledgement, the mailed notice, and the objection. The shirt is PREVENT because the sequence is printed on the ballot. Assisted marking is DETECTED only if a second person is required. That last rule is the site's, and the receipt says the gist does not name it.
 
 Hash: 80f6efc.
+
+## 2026-11-23 gist
+
+What: The site follows Elections.md version 2026-11-23, gist revision 89bad82.
+
+Why: This morning's gist adds assisted marking, a penalty for lookalike emoji materials, and an audio checksum. The red-team link was still pinned to 20 November.
+
+How: The pin moved. Counting, the two attack rows, and the glossary match the new sections. The receipt no longer says assisted marking is missing from the gist.
+
+Hash: pending this commit.

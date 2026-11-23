@@ -97,13 +97,13 @@ export const attackGroups: AttackGroup[] = [
         name: "Lookalike emoji shirt",
         verdict: "PREVENT",
         handling:
-          "Red team, resolved. The official sequence is printed on the ballot next to the name. The voter does not copy a sequence off a shirt. A uniqueness threshold and a banned list keep two official sequences from being near copies. The optional checksum is not the control. The audit counts the printed line that was marked.",
+          "Red team, resolved. The official sequence is printed on the ballot next to the name, and published before election day in high-contrast shape-plus-text form at the polling place and in the phone app. A uniqueness threshold and a banned list keep two official sequences from being near copies. Making or handing out a lookalike sequence is a criminal offense: a fine, and possible disqualification from running elections. The optional checksum is not the control. The audit counts the printed line that was marked.",
       },
       {
         name: "Partisan assisted marking",
         verdict: "DETECTED",
         handling:
-          "Red team, resolved. Help marking a ballot cannot be one election worker. The voter uses an assistant who is not staff, or a bipartisan pair. One partisan worker marking it alone is a control violation an on-site observer can see without reading the vote. The paper will match that mark. The signal is the violation. If no observer is allowed in the room at all, that is the existing custody residual, not this case.",
+          "Red team, resolved. Assisted marking requires observers from both major parties, or one party observer plus an independent. A personal assistant is still allowed, and may not be the sole marker unless those observers are also present. The ledger records the voter, the assistant, and the observers. One partisan worker marking it alone is a control violation. The paper will match that mark. The signal is the missing observers and the log. After the ballot is cast, the voter can hear an audio rendering of the checksum. If no observer is allowed in the room at all, that is the existing custody residual, not this case.",
       },
       {
         name: "Internet or remote voting compromise",

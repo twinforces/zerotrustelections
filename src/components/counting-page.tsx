@@ -84,12 +84,16 @@ export function CountingPage() {
             <li>
               <strong>After it is cast.</strong> The phone may show the checksum recorded for that ballot ID.
               <CryptoFairy /> A public list of cast checksums is published, so the voter can see that theirs
-              is there. The app cannot make a valid checksum before the ballot is cast and the ID is known.
+              is there. An audio rendering of that checksum, and optionally the emoji sequence, is archived
+              for the voter: in the app, on mailed media, or by phone playback. None of it can be generated
+              before the ballot is cast and the ID is known.
             </li>
             <li>
-              <strong>Help is not one worker.</strong> A voter who cannot mark the ballot uses an assistant who
-              is not election staff, or a bipartisan pair. One partisan worker marking it alone is a control
-              violation. An observer on site can see that it happened without reading the vote.
+              <strong>Help is not one marker.</strong> Assisted marking happens with observers from both major
+              parties present, or one party observer plus an independent observer. The voter may still choose
+              a personal assistant. That assistant may not be the only person marking unless those observers
+              are also there. The ledger records the voter, the assistant, and the observers.
+              <CryptoFairy />
             </li>
             <li>
               <strong>Ordinary receipts stay private.</strong> Looking is not the same as publishing who you

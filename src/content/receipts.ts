@@ -16,7 +16,7 @@ export type ReceiptGroup = {
 
 const GIST = "https://gist.github.com/twinforces/d99236e3da06118ee14506f6979997e5";
 const GIST_RAW =
-  "https://gist.githubusercontent.com/twinforces/d99236e3da06118ee14506f6979997e5/raw/5830600e469c913b3813deaca61a70fb8247672c/Elections.md";
+  "https://gist.githubusercontent.com/twinforces/d99236e3da06118ee14506f6979997e5/raw/89bad82fc371028b06ceb0390f6260b20b9a512a/Elections.md";
 
 export const receipts: ReceiptGroup[] = [
   {
@@ -26,12 +26,12 @@ export const receipts: ReceiptGroup[] = [
     items: [
       {
         id: "gist",
-        claim: "The design baseline is the public gist Elections.md, version 2026-11-20.",
+        claim: "The design baseline is the public gist Elections.md, version 2026-11-23.",
         appears: "Footer, Red Team, and every flow that says it follows the baseline.",
         source: "twinforces/Elections.md",
         href: GIST,
         supports:
-          "Re-read from the author's paste on 20 November 2026, then confirmed against gist revision 5830600e469c913b3813deaca61a70fb8247672c. The red-team link fetches that revision, not the unpinned raw URL, so a cached older copy is not the session. Registration, counting, custody controls, the mulligan statute, residual risks, and the card rules are in that file.",
+          "Confirmed 23 November 2026 against gist revision 89bad82fc371028b06ceb0390f6260b20b9a512a. The red-team link fetches that revision, not the unpinned raw URL. This revision adds assisted marking, a criminal penalty for lookalike emoji materials, and an audio checksum archive. The 20 November custody controls, mulligan statute, and card rules are still in the file.",
       },
       {
         id: "gist-raw",
@@ -40,7 +40,7 @@ export const receipts: ReceiptGroup[] = [
         source: "Raw gist",
         href: GIST_RAW,
         supports:
-          "The button uses the grok.com/?q= form. The query tells Grok to fetch revision 5830600e469c913b3813deaca61a70fb8247672c, not the unpinned raw URL. A change on the website does not change the session. A later gist edit does not either, until this pin is moved.",
+          "The button uses the grok.com/?q= form. The query tells Grok to fetch revision 89bad82fc371028b06ceb0390f6260b20b9a512a, not the unpinned raw URL. A change on the website does not change the session. A later gist edit does not either, until this pin is moved.",
       },
       {
         id: "session",
@@ -82,10 +82,10 @@ export const receipts: ReceiptGroup[] = [
         id: "red-team-four",
         claim: "Four red-team failures are resolved: single-operator custody, the provisional side door, a lookalike emoji shirt, and partisan assisted marking.",
         appears: "Attacks. Counting states the assistance rule. The glossary states the shirt and the assistance rule.",
-        source: "Red-team cases supplied 23 November 2026, read against Elections.md version 2026-11-20",
+        source: "Red-team cases supplied 23 November 2026, read against Elections.md version 2026-11-23",
         href: GIST,
         supports:
-          "Single-operator custody and the provisional side door are closed by controls already in the 20 November baseline: role split or video, dual seals, the early commitment, the random challenge, the provisional acknowledgement, the mailed notice, the objection window, and the rate trigger. The lookalike shirt is closed by the printed sequence plus the uniqueness threshold, which the baseline already requires. Assisted marking is not named in the gist. The site closes it by forbidding a single election worker to mark the ballot. One partisan worker doing it is a control violation an observer can see without reading the vote. If the observer is also removed, that is the existing custody residual, not a new hole.",
+          "Single-operator custody and the provisional side door are closed by the custody controls and the provisional acknowledgement. The 23 November baseline also names the other two. Assisted marking requires observers from both major parties, or one party observer plus an independent. A personal assistant may not be the sole marker unless those observers are present, and the marking is logged. Lookalike emoji materials are a criminal offense. Official sequences are published before election day in high-contrast shape-plus-text form. An audio rendering of the checksum is archived after the ballot is cast. If no observer is allowed in the room at all, that is the existing custody residual, not a new hole.",
       },
     ],
   },
@@ -301,7 +301,7 @@ export const receipts: ReceiptGroup[] = [
   {
     id: "scoring",
     title: "Red-team cards",
-    note: "Re-read 20 November 2026, revision 5830600. PARTIAL is still absent from the card labels. One operating bullet still paints FAILURE and DETECTED in the same dark red style. The image rules, and this site, keep DETECTED amber.",
+    note: "Re-checked 23 November 2026, revision 89bad82. PARTIAL is still absent from the card labels. One operating bullet still paints FAILURE and DETECTED in the same dark red style. The image rules, and this site, keep DETECTED amber.",
     items: [
       {
         id: "labels",

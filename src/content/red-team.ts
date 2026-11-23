@@ -1,16 +1,16 @@
-export const BASELINE_REV = "5830600e469c913b3813deaca61a70fb8247672c";
+export const BASELINE_REV = "89bad82fc371028b06ceb0390f6260b20b9a512a";
 
 export const BASELINE_RAW =
-  "https://gist.githubusercontent.com/twinforces/d99236e3da06118ee14506f6979997e5/raw/5830600e469c913b3813deaca61a70fb8247672c/Elections.md";
+  "https://gist.githubusercontent.com/twinforces/d99236e3da06118ee14506f6979997e5/raw/89bad82fc371028b06ceb0390f6260b20b9a512a/Elections.md";
 
 export const BASELINE_GIST =
   "https://gist.github.com/twinforces/d99236e3da06118ee14506f6979997e5";
 
 export const RED_TEAM_PROMPT =
-  "You are about to load an open red-team session for a continuous-audit election design. Fetch and strictly follow the baseline at https://gist.githubusercontent.com/twinforces/d99236e3da06118ee14506f6979997e5/raw/5830600e469c913b3813deaca61a70fb8247672c/Elections.md Warning: this loads the full design and card rules, version 2026-11-20. Then begin as instructed.";
+  "You are about to load an open red-team session for a continuous-audit election design. Fetch and strictly follow the baseline at https://gist.githubusercontent.com/twinforces/d99236e3da06118ee14506f6979997e5/raw/89bad82fc371028b06ceb0390f6260b20b9a512a/Elections.md Warning: this loads the full design and card rules, version 2026-11-23. Then begin as instructed.";
 
 export const RED_TEAM_URL =
-  "https://grok.com/?q=You%20are%20about%20to%20load%20an%20open%20red-team%20session%20for%20a%20continuous-audit%20election%20design.%20Fetch%20and%20strictly%20follow%20the%20baseline%20at%20https%3A%2F%2Fgist.githubusercontent.com%2Ftwinforces%2Fd99236e3da06118ee14506f6979997e5%2Fraw%2F5830600e469c913b3813deaca61a70fb8247672c%2FElections.md%20Warning%3A%20this%20loads%20the%20full%20design%20and%20card%20rules%2C%20version%202026-11-20.%20Then%20begin%20as%20instructed.";
+  "https://grok.com/?q=You%20are%20about%20to%20load%20an%20open%20red-team%20session%20for%20a%20continuous-audit%20election%20design.%20Fetch%20and%20strictly%20follow%20the%20baseline%20at%20https%3A%2F%2Fgist.githubusercontent.com%2Ftwinforces%2Fd99236e3da06118ee14506f6979997e5%2Fraw%2F89bad82fc371028b06ceb0390f6260b20b9a512a%2FElections.md%20Warning%3A%20this%20loads%20the%20full%20design%20and%20card%20rules%2C%20version%202026-11-23.%20Then%20begin%20as%20instructed.";
 
 export const FAILURE_BULLETS = [
   "Check-ins, paper, and the scanner were inflated together",
