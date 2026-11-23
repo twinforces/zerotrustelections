@@ -128,4 +128,4 @@ Why: This morning's gist adds assisted marking, a penalty for lookalike emoji ma
 
 How: The pin moved. Counting, the two attack rows, and the glossary match the new sections. The receipt no longer says assisted marking is missing from the gist.
 
-Hash: pending this commit.
+Hash: 5408edd.

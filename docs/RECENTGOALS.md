@@ -14,4 +14,4 @@ Why: This morning's gist added assisted marking, decoy-emoji penalties, and an a
 
 How: Red-team link, counting, the two attack rows, the glossary, and the receipts.
 
-Hash: pending this commit.
+Hash: 5408edd.
