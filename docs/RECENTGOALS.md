@@ -14,4 +14,4 @@ Why: Scanners are no longer a single firmware total. The pictures have to agree,
 
 How: A diagram on `/counting#firmware`. The red-team pin moved. The file's version line still says 2026-11-23.
 
-Hash: pending this commit.
+Hash: a9302c1.

@@ -138,4 +138,4 @@ Why: Gist revision 298ba5a adds an image-and-count pipeline. The file's version 
 
 How: The diagram is on `/counting#firmware`. Scanners make images only. At least three separate programs must match exactly. Disagreement throws out the electronic total. The red-team pin moved to that revision.
 
-Hash: pending this commit.
+Hash: a9302c1.
