@@ -139,3 +139,14 @@ Why: Gist revision 298ba5a adds an image-and-count pipeline. The file's version 
 How: The diagram is on `/counting#firmware`. Scanners make images only. At least three separate programs must match exactly. Disagreement throws out the electronic total. The red-team pin moved to that revision.
 
 Hash: a9302c1.
+
+## 2026-11-24 fan
+
+What: The firmware picture is a double fan, not a stack of cards.
+
+Why: One ballot has to be seen splitting into three scans, meeting as one image, splitting into three counts, and meeting as one tally.
+
+How: An SVG on the firmware section. The second fan is three counters. A scanner still does not emit the tally.
+
+Hash: pending this commit.
+

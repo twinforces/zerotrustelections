@@ -16,85 +16,102 @@ const PRIMERS = [
   },
 ];
 
-const SCANNERS = [
-  { name: "Scanner 1", text: "A picture of the batch. Not a total." },
-  { name: "Scanner 2", text: "The same batch, a second machine, or a second pass." },
-  { name: "Scanner 3", text: "The pictures have to be the same set." },
-];
+function FanWires({ from, targets }: { from: [number, number]; targets: [number, number][] }) {
+  return targets.map(([x, y]) => (
+    <line key={`${x}-${y}`} className="fan-wire" x1={from[0]} y1={from[1]} x2={x} y2={y} />
+  ));
+}
 
-const COUNTERS = [
-  { name: "Counter A", text: "One language, one code base." },
-  { name: "Counter B", text: "A different language, written separately." },
-  { name: "Counter C", text: "A third code base. The totals must match exactly." },
-];
+function FanBox({
+  x,
+  y,
+  w,
+  h,
+  title,
+  detail,
+  canon = false,
+}: {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  title: string;
+  detail: string;
+  canon?: boolean;
+}) {
+  const cx = x + w / 2;
+  return (
+    <g>
+      <rect className={canon ? "fan-box is-canon" : "fan-box"} x={x} y={y} width={w} height={h} rx="3" />
+      <text className="fan-label" x={cx} y={y + 22} textAnchor="middle">
+        {title}
+      </text>
+      <text className="fan-detail" x={cx} y={y + 40} textAnchor="middle">
+        {detail}
+      </text>
+    </g>
+  );
+}
 
 function ImagePipeline() {
+  const scans: [number, number][] = [
+    [62, 96],
+    [200, 96],
+    [338, 96],
+  ];
+  const counts: [number, number][] = [
+    [62, 292],
+    [200, 292],
+    [338, 292],
+  ];
   return (
-    <div className="pipe" role="group" aria-label="Three scanners, three counters, then public ballot images">
-      <div className="pipe-node">
-        <p className="pipe-kicker">Start</p>
-        <p className="pipe-title">Paper batch</p>
-        <p className="pipe-text">The ballots in the box, including the known test ballots.</p>
-      </div>
-      <p className="pipe-join">
-        <span aria-hidden="true">↓</span> Images only. No count comes off the scanner.
-      </p>
-      <div className="pipe-row">
-        {SCANNERS.map((item) => (
-          <div key={item.name} className="pipe-node">
-            <p className="pipe-kicker">Scanner</p>
-            <p className="pipe-title">{item.name}</p>
-            <p className="pipe-text">{item.text}</p>
-          </div>
-        ))}
-      </div>
-      <p className="pipe-join">
-        The image sets must agree. Test-ballot pictures must match the ones committed in advance.
-        <CryptoFairy />
-      </p>
-      <div className="pipe-row">
-        {COUNTERS.map((item) => (
-          <div key={item.name} className="pipe-node">
-            <p className="pipe-kicker">Counter</p>
-            <p className="pipe-title">{item.name}</p>
-            <p className="pipe-text">{item.text}</p>
-          </div>
-        ))}
-      </div>
-      <div className="pipe-row is-split">
-        <div className="pipe-node is-stop">
-          <p className="pipe-kicker">Disagree</p>
-          <p className="pipe-title">Throw out the electronic total</p>
-          <p className="pipe-text">
-            Expand the risk-limiting audit, or take the mulligan path. Do not publish a total the three
-            counters do not share.
-          </p>
-        </div>
-        <div className="pipe-node is-public">
-          <p className="pipe-kicker">Agree</p>
-          <p className="pipe-title">Publish the ballot images</p>
-          <p className="pipe-text">
-            The pictures, and the choices read from them, go public. No voter identity is in the image. Anyone
-            may recount them.
-          </p>
-        </div>
-      </div>
-      <div className="pipe-row is-split">
-        <div className="pipe-node">
-          <p className="pipe-kicker">Ordinary ballot</p>
-          <p className="pipe-title">The image stays untied to a person</p>
-          <p className="pipe-text">Publishing the picture is not publishing who cast it.</p>
-        </div>
-        <div className="pipe-node is-public">
-          <p className="pipe-kicker">Canary</p>
-          <p className="pipe-title">A public identifier on the image</p>
-          <p className="pipe-text">
-            A few observers reject secrecy in advance. Their image can be matched to the checksum they release
-            later. A missing or mismatched canary image is a detection.
-          </p>
-        </div>
-      </div>
-    </div>
+    <figure className="fan-figure">
+      <svg className="fan-diagram" viewBox="0 0 400 520" role="img" aria-labelledby="fan-title fan-desc">
+        <title id="fan-title">One ballot, three scans, one image, three counts, one tally</title>
+        <desc id="fan-desc">
+          One paper ballot fans out to three scans. Those scans combine into one canonical image. That image
+          fans out to three independent counters. Those counts combine into one canonical tally, and the image
+          is published.
+        </desc>
+        <FanWires from={[200, 58]} targets={scans} />
+        <FanWires
+          from={[200, 188]}
+          targets={[
+            [62, 148],
+            [200, 148],
+            [338, 148],
+          ]}
+        />
+        <FanWires from={[200, 240]} targets={counts} />
+        <FanWires
+          from={[200, 396]}
+          targets={[
+            [62, 344],
+            [200, 344],
+            [338, 344],
+          ]}
+        />
+        <line className="fan-wire" x1="200" y1="448" x2="200" y2="468" />
+        <FanBox x={130} y={8} w={140} h={50} title="1 ballot" detail="paper" canon />
+        <FanBox x={16} y={96} w={92} h={52} title="Scan 1" detail="image" />
+        <FanBox x={154} y={96} w={92} h={52} title="Scan 2" detail="image" />
+        <FanBox x={292} y={96} w={92} h={52} title="Scan 3" detail="image" />
+        <FanBox x={100} y={188} w={200} h={52} title="Canonical image" detail="the scans agree" canon />
+        <FanBox x={16} y={292} w={92} h={52} title="Count 1" detail="own code" />
+        <FanBox x={154} y={292} w={92} h={52} title="Count 2" detail="own code" />
+        <FanBox x={292} y={292} w={92} h={52} title="Count 3" detail="own code" />
+        <FanBox x={100} y={396} w={200} h={52} title="Canonical tally" detail="the counts match" canon />
+        <FanBox x={90} y={468} w={220} h={44} title="Public images" detail="no voter identity" canon />
+      </svg>
+      <figcaption className="fan-caption">
+        One ballot is scanned three times. The three pictures become one canonical image only if they agree,
+        including the known test ballots against the pictures committed in advance.
+        <CryptoFairy /> That image goes to three counters, not back through a scanner. A scanner never emits
+        the tally. The three counts become one canonical tally only if they match exactly. If either meeting
+        fails, there is no electronic total: the audit expands, or the contest takes the mulligan path. The
+        agreed images are what get published.
+      </figcaption>
+    </figure>
   );
 }
 

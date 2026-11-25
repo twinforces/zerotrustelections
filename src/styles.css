@@ -948,59 +948,50 @@
   text-align: center;
 }
 
-.pipe {
-  display: grid;
-  gap: 0.75rem;
+.fan-figure {
+  margin: 0;
+  max-width: 40rem;
 }
 
-.pipe-row {
-  display: grid;
-  gap: 0.75rem;
+.fan-diagram {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.pipe-node {
-  border: 1px solid var(--color-line);
-  background: var(--color-panel);
-  padding: 1rem 1.1rem 1.15rem;
+.fan-wire {
+  stroke: var(--color-teal);
+  stroke-width: 2;
 }
 
-.pipe-node.is-public {
-  border-color: var(--color-teal);
+.fan-box {
+  fill: var(--color-panel);
+  stroke: var(--color-line);
+  stroke-width: 1.5;
 }
 
-.pipe-node.is-stop {
-  border-color: var(--color-hazard-red);
+.fan-box.is-canon {
+  stroke: var(--color-teal);
+  stroke-width: 2;
 }
 
-.pipe-kicker {
-  color: var(--color-teal);
-  font-size: 0.72rem;
+.fan-label {
+  fill: var(--color-ink);
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-family: var(--font-sans);
 }
 
-.pipe-node.is-stop .pipe-kicker {
-  color: var(--color-hazard-red);
+.fan-detail {
+  fill: var(--color-muted);
+  font-size: 12px;
+  font-family: var(--font-sans);
 }
 
-.pipe-title {
-  margin-top: 0.35rem;
-  font-weight: 700;
-  color: var(--color-ink);
-}
-
-.pipe-text {
-  margin-top: 0.35rem;
+.fan-caption {
+  margin-top: 1rem;
+  max-width: 42rem;
   color: var(--color-muted);
-}
-
-.pipe-join {
-  color: var(--color-teal);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-align: center;
 }
 
 .compare-figure {
@@ -1117,13 +1108,5 @@
   .compare-eq {
     display: flex;
     align-items: center;
-  }
-
-  .pipe-row {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .pipe-row.is-split {
-    grid-template-columns: 1fr 1fr;
   }
 }
