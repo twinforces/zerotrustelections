@@ -8,10 +8,10 @@ Why: The design was one scrolling page, then the two flows needed diagrams. Clai
 
 How: TanStack Start app in this repo. Canonical source log is `src/content/receipts.ts`, rendered at `/receipts`. Profile mark is `public/grumpy.jpg`. Docs stay short on purpose.
 
-What: The firmware picture is a double fan.
+What: The fan is labeled Scanner and Counter, with arrowheads, and public images are an open count.
 
-Why: Cards did not show one ballot splitting into three scans, meeting as one image, then splitting into three counts.
+Why: The picture has to show direction, and publishing the images is so anyone can run their own software.
 
-How: SVG on `/counting#firmware`. The second fan is counters. Scanners still only make pictures.
+How: Same diagram on `/counting#firmware`.
 
-Hash: 03736de.
+Hash: 17efe1d.

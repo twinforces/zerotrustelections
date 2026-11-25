@@ -158,5 +158,5 @@ Why: The boxes were abbreviated, the direction was unmarked, and publishing the 
 
 How: Same SVG. The last box says anyone can run a counter.
 
-Hash: pending this commit.
+Hash: 17efe1d.
 
