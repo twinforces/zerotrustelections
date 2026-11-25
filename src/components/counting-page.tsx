@@ -16,9 +16,15 @@ const PRIMERS = [
   },
 ];
 
-function FanWires({ from, targets }: { from: [number, number]; targets: [number, number][] }) {
+function FanOut({ from, targets }: { from: [number, number]; targets: [number, number][] }) {
   return targets.map(([x, y]) => (
-    <line key={`${x}-${y}`} className="fan-wire" x1={from[0]} y1={from[1]} x2={x} y2={y} />
+    <line key={`${x}-${y}-out`} className="fan-wire" x1={from[0]} y1={from[1]} x2={x} y2={y} />
+  ));
+}
+
+function FanIn({ sources, to }: { sources: [number, number][]; to: [number, number] }) {
+  return sources.map(([x, y]) => (
+    <line key={`${x}-${y}-in`} className="fan-wire" x1={x} y1={y} x2={to[0]} y2={to[1]} />
   ));
 }
 
@@ -54,62 +60,43 @@ function FanBox({
 }
 
 function ImagePipeline() {
-  const scans: [number, number][] = [
-    [62, 96],
-    [200, 96],
-    [338, 96],
-  ];
-  const counts: [number, number][] = [
-    [62, 292],
-    [200, 292],
-    [338, 292],
-  ];
   return (
     <figure className="fan-figure">
-      <svg className="fan-diagram" viewBox="0 0 400 520" role="img" aria-labelledby="fan-title fan-desc">
-        <title id="fan-title">One ballot, three scans, one image, three counts, one tally</title>
+      <svg className="fan-diagram" viewBox="0 0 460 548" role="img" aria-labelledby="fan-title fan-desc">
+        <title id="fan-title">One ballot, three scanners, one image, three counters, one tally</title>
         <desc id="fan-desc">
-          One paper ballot fans out to three scans. Those scans combine into one canonical image. That image
-          fans out to three independent counters. Those counts combine into one canonical tally, and the image
-          is published.
+          One paper ballot fans out to three scanners. Those pictures combine into one canonical image. That
+          image fans out to three counters. Those counts combine into one canonical tally. The images are
+          published so anyone can run their own counting software.
         </desc>
-        <FanWires from={[200, 58]} targets={scans} />
-        <FanWires
-          from={[200, 188]}
-          targets={[
-            [62, 148],
-            [200, 148],
-            [338, 148],
-          ]}
-        />
-        <FanWires from={[200, 240]} targets={counts} />
-        <FanWires
-          from={[200, 396]}
-          targets={[
-            [62, 344],
-            [200, 344],
-            [338, 344],
-          ]}
-        />
-        <line className="fan-wire" x1="200" y1="448" x2="200" y2="468" />
-        <FanBox x={130} y={8} w={140} h={50} title="1 ballot" detail="paper" canon />
-        <FanBox x={16} y={96} w={92} h={52} title="Scan 1" detail="image" />
-        <FanBox x={154} y={96} w={92} h={52} title="Scan 2" detail="image" />
-        <FanBox x={292} y={96} w={92} h={52} title="Scan 3" detail="image" />
-        <FanBox x={100} y={188} w={200} h={52} title="Canonical image" detail="the scans agree" canon />
-        <FanBox x={16} y={292} w={92} h={52} title="Count 1" detail="own code" />
-        <FanBox x={154} y={292} w={92} h={52} title="Count 2" detail="own code" />
-        <FanBox x={292} y={292} w={92} h={52} title="Count 3" detail="own code" />
-        <FanBox x={100} y={396} w={200} h={52} title="Canonical tally" detail="the counts match" canon />
-        <FanBox x={90} y={468} w={220} h={44} title="Public images" detail="no voter identity" canon />
+        <defs>
+          <marker id="fan-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+            <path fill="#2ec4b6" d="M 0 0 L 10 5 L 0 10 z" />
+          </marker>
+        </defs>
+        <FanOut from={[230, 64]} targets={[[76, 94], [230, 94], [384, 94]]} />
+        <FanIn sources={[[76, 160], [230, 160], [384, 160]]} to={[230, 190]} />
+        <FanOut from={[230, 256]} targets={[[76, 302], [230, 302], [384, 302]]} />
+        <FanIn sources={[[76, 368], [230, 368], [384, 368]]} to={[230, 406]} />
+        <line className="fan-wire" x1="230" y1="472" x2="230" y2="492" />
+        <FanBox x={150} y={8} w={160} h={50} title="1 ballot" detail="paper" canon />
+        <FanBox x={12} y={100} w={128} h={54} title="Scanner 1" detail="image" />
+        <FanBox x={166} y={100} w={128} h={54} title="Scanner 2" detail="image" />
+        <FanBox x={320} y={100} w={128} h={54} title="Scanner 3" detail="image" />
+        <FanBox x={110} y={196} w={240} h={54} title="Canonical image" detail="the scanners agree" canon />
+        <FanBox x={12} y={308} w={128} h={54} title="Counter 1" detail="own code" />
+        <FanBox x={166} y={308} w={128} h={54} title="Counter 2" detail="own code" />
+        <FanBox x={320} y={308} w={128} h={54} title="Counter 3" detail="own code" />
+        <FanBox x={110} y={412} w={240} h={54} title="Canonical tally" detail="the counters match" canon />
+        <FanBox x={90} y={498} w={280} h={44} title="Public images" detail="anyone can run a counter" canon />
       </svg>
       <figcaption className="fan-caption">
-        One ballot is scanned three times. The three pictures become one canonical image only if they agree,
+        One ballot goes to three scanners. The three pictures become one canonical image only if they agree,
         including the known test ballots against the pictures committed in advance.
-        <CryptoFairy /> That image goes to three counters, not back through a scanner. A scanner never emits
-        the tally. The three counts become one canonical tally only if they match exactly. If either meeting
-        fails, there is no electronic total: the audit expands, or the contest takes the mulligan path. The
-        agreed images are what get published.
+        <CryptoFairy /> That image goes to three counters, each its own code. They become one canonical tally
+        only if they match exactly. If either meeting fails, there is no electronic total: the audit expands,
+        or the contest takes the mulligan path. The agreed images are published, with no voter identity, so
+        anyone can run their own counting software on them.
       </figcaption>
     </figure>
   );
@@ -311,10 +298,9 @@ export function CountingPage() {
         title="Three scanners. Three counters. Then the pictures go public."
         lede={
           <>
-            A scanner produces a <Term id="ballot-image" /> and nothing else. More than one scan of the same
-            batch has to agree. At least three programs, written separately, count those pictures and have to
-            match exactly. Paper is still the record. The electronic total is a check on the reading, not a
-            replacement for it.
+            A scanner produces a <Term id="ballot-image" /> and nothing else. Three of them have to agree.
+            At least three programs, written separately, count that picture and have to match exactly. The
+            images are published, so anyone can run their own counting software. Paper is still the record.
           </>
         }
       >

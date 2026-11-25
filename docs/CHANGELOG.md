@@ -150,3 +150,13 @@ How: An SVG on the firmware section. The second fan is three counters. A scanner
 
 Hash: 03736de.
 
+## 2026-11-24 labels
+
+What: The fan says Scanner and Counter, the lines have arrowheads, and public images mean anyone can run a counter.
+
+Why: The boxes were abbreviated, the direction was unmarked, and publishing the pictures was left as a file dump instead of an open count.
+
+How: Same SVG. The last box says anyone can run a counter.
+
+Hash: pending this commit.
+

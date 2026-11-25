@@ -294,7 +294,7 @@ export const receipts: ReceiptGroup[] = [
         source: "Elections.md revision 298ba5a, diverse image-and-count pipeline and public ballot images",
         href: GIST,
         supports:
-          "Added 24 November 2026. The file's version line still says 2026-11-23. Several scans of a batch must agree, and known test-ballot images must match pictures committed in advance. Disagreement throws out the electronic total and expands the risk-limiting audit or the mulligan. Paper stays authoritative. After agreement, the images and the choices read from them are published. Ordinary images stay untied to a person. A canary image carries a public identifier. A missing or mismatched canary image is a detection. The diagram is a double fan: one ballot to three scans, one canonical image, three counters, one canonical tally.",
+          "Added 24 November 2026. The file's version line still says 2026-11-23. Several scans of a batch must agree, and known test-ballot images must match pictures committed in advance. Disagreement throws out the electronic total and expands the risk-limiting audit or the mulligan. Paper stays authoritative. After agreement, the images and the choices read from them are published. Ordinary images stay untied to a person. A canary image carries a public identifier. A missing or mismatched canary image is a detection. The diagram is a double fan: one ballot to three scanners, one canonical image, three counters, one canonical tally. Publishing the images means anyone can run their own counting software.",
       },
       {
         id: "custody",

@@ -374,7 +374,7 @@ export const glossary: GlossaryEntry[] = [
     term: "Ballot image",
     short:
       "A ballot image is the picture a scanner makes of one paper ballot. The scanner does not produce the count.",
-    note: "More than one scan of the batch must agree on the image set. Known test ballots must match pictures committed in advance. At least three independent programs then count the images and must match exactly. After that, the images and the choices read from them are published, with no voter identity. Anyone can recount them. An ordinary image stays untied to a person. A canary image carries a public identifier.",
+    note: "More than one scan of the batch must agree on the image set. Known test ballots must match pictures committed in advance. At least three independent programs then count the images and must match exactly. After that, the images and the choices read from them are published, with no voter identity. Anyone can run their own counting software on those images. An ordinary image stays untied to a person. A canary image carries a public identifier.",
     category: "Counting",
     related: ["scanner-total", "paper-ballot", "canary", "rla"],
     aliases: ["ballot images", "cast-vote record"],

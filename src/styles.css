@@ -962,6 +962,11 @@
 .fan-wire {
   stroke: var(--color-teal);
   stroke-width: 2;
+  marker-end: url(#fan-arrow);
+}
+
+.fan-arrow {
+  fill: var(--color-teal);
 }
 
 .fan-box {
