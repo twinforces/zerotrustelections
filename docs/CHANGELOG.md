@@ -129,3 +129,13 @@ Why: This morning's gist adds assisted marking, a penalty for lookalike emoji ma
 How: The pin moved. Counting, the two attack rows, and the glossary match the new sections. The receipt no longer says assisted marking is missing from the gist.
 
 Hash: 5408edd.
+
+## 2026-11-24 firmware
+
+What: Counting has a firmware section: three scanners, three counters, then public ballot images.
+
+Why: Gist revision 298ba5a adds an image-and-count pipeline. The file's version line still says 2026-11-23.
+
+How: The diagram is on `/counting#firmware`. Scanners make images only. At least three separate programs must match exactly. Disagreement throws out the electronic total. The red-team pin moved to that revision.
+
+Hash: pending this commit.

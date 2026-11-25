@@ -16,7 +16,7 @@ export type ReceiptGroup = {
 
 const GIST = "https://gist.github.com/twinforces/d99236e3da06118ee14506f6979997e5";
 const GIST_RAW =
-  "https://gist.githubusercontent.com/twinforces/d99236e3da06118ee14506f6979997e5/raw/89bad82fc371028b06ceb0390f6260b20b9a512a/Elections.md";
+  "https://gist.githubusercontent.com/twinforces/d99236e3da06118ee14506f6979997e5/raw/298ba5a63898dcbcf99e565492121a22d35f2638/Elections.md";
 
 export const receipts: ReceiptGroup[] = [
   {
@@ -31,7 +31,7 @@ export const receipts: ReceiptGroup[] = [
         source: "twinforces/Elections.md",
         href: GIST,
         supports:
-          "Confirmed 23 November 2026 against gist revision 89bad82fc371028b06ceb0390f6260b20b9a512a. The red-team link fetches that revision, not the unpinned raw URL. This revision adds assisted marking, a criminal penalty for lookalike emoji materials, and an audio checksum archive. The 20 November custody controls, mulligan statute, and card rules are still in the file.",
+          "Confirmed 24 November 2026 against gist revision 298ba5a63898dcbcf99e565492121a22d35f2638. The file's own version line still says 2026-11-23. This revision adds the image-and-count pipeline: scanners produce images only, at least three independent programs must match exactly, and the images are then published with no voter identity. The red-team link fetches that revision, not the unpinned raw URL.",
       },
       {
         id: "gist-raw",
@@ -40,7 +40,7 @@ export const receipts: ReceiptGroup[] = [
         source: "Raw gist",
         href: GIST_RAW,
         supports:
-          "The button uses the grok.com/?q= form. The query tells Grok to fetch revision 89bad82fc371028b06ceb0390f6260b20b9a512a, not the unpinned raw URL. A change on the website does not change the session. A later gist edit does not either, until this pin is moved.",
+          "The button uses the grok.com/?q= form. The query tells Grok to fetch revision 298ba5a63898dcbcf99e565492121a22d35f2638, not the unpinned raw URL. A change on the website does not change the session. A later gist edit does not either, until this pin is moved.",
       },
       {
         id: "session",
@@ -286,6 +286,15 @@ export const receipts: ReceiptGroup[] = [
         href: GIST,
         supports:
           "The gist says written reports are not authoritative and that paper and published aggregates remain the record.",
+      },
+      {
+        id: "firmware",
+        claim: "Scanners produce images only. At least three independent programs must count them and match exactly. The images are then published, with no voter identity.",
+        appears: "Counting, the firmware section. The canary section. Attacks, scanner firmware.",
+        source: "Elections.md revision 298ba5a, diverse image-and-count pipeline and public ballot images",
+        href: GIST,
+        supports:
+          "Added 24 November 2026. The file's version line still says 2026-11-23. Several scans of a batch must agree, and known test-ballot images must match pictures committed in advance. Disagreement throws out the electronic total and expands the risk-limiting audit or the mulligan. Paper stays authoritative. After agreement, the images and the choices read from them are published. Ordinary images stay untied to a person. A canary image carries a public identifier. A missing or mismatched canary image is a detection. The diagram draws three scanners and three counters as the working picture of those rules.",
       },
       {
         id: "custody",

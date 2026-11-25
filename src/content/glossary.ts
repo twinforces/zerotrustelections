@@ -364,10 +364,20 @@ export const glossary: GlossaryEntry[] = [
     id: "scanner-total",
     term: "Scanner total",
     short: "The scanner total is the electronic count produced by tabulators reading paper ballots.",
-    note: "It is one leg of the three-way reconciliation and the figure a risk-limiting audit compares back to paper. It is not the record of truth.",
+    note: "It is one leg of the three-way reconciliation. The figure itself is not a number the scanner emits. Scanners produce images. At least three separate programs count those images, and they must match exactly before an electronic total is accepted.",
     category: "Counting",
     related: ["three-way", "paper-ballot", "rla", "injected-ballot"],
     aliases: ["electronic total", "tabulator"],
+  },
+  {
+    id: "ballot-image",
+    term: "Ballot image",
+    short:
+      "A ballot image is the picture a scanner makes of one paper ballot. The scanner does not produce the count.",
+    note: "More than one scan of the batch must agree on the image set. Known test ballots must match pictures committed in advance. At least three independent programs then count the images and must match exactly. After that, the images and the choices read from them are published, with no voter identity. Anyone can recount them. An ordinary image stays untied to a person. A canary image carries a public identifier.",
+    category: "Counting",
+    related: ["scanner-total", "paper-ballot", "canary", "rla"],
+    aliases: ["ballot images", "cast-vote record"],
   },
   {
     id: "hand-count",

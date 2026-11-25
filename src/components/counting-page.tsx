@@ -16,6 +16,88 @@ const PRIMERS = [
   },
 ];
 
+const SCANNERS = [
+  { name: "Scanner 1", text: "A picture of the batch. Not a total." },
+  { name: "Scanner 2", text: "The same batch, a second machine, or a second pass." },
+  { name: "Scanner 3", text: "The pictures have to be the same set." },
+];
+
+const COUNTERS = [
+  { name: "Counter A", text: "One language, one code base." },
+  { name: "Counter B", text: "A different language, written separately." },
+  { name: "Counter C", text: "A third code base. The totals must match exactly." },
+];
+
+function ImagePipeline() {
+  return (
+    <div className="pipe" role="group" aria-label="Three scanners, three counters, then public ballot images">
+      <div className="pipe-node">
+        <p className="pipe-kicker">Start</p>
+        <p className="pipe-title">Paper batch</p>
+        <p className="pipe-text">The ballots in the box, including the known test ballots.</p>
+      </div>
+      <p className="pipe-join">
+        <span aria-hidden="true">↓</span> Images only. No count comes off the scanner.
+      </p>
+      <div className="pipe-row">
+        {SCANNERS.map((item) => (
+          <div key={item.name} className="pipe-node">
+            <p className="pipe-kicker">Scanner</p>
+            <p className="pipe-title">{item.name}</p>
+            <p className="pipe-text">{item.text}</p>
+          </div>
+        ))}
+      </div>
+      <p className="pipe-join">
+        The image sets must agree. Test-ballot pictures must match the ones committed in advance.
+        <CryptoFairy />
+      </p>
+      <div className="pipe-row">
+        {COUNTERS.map((item) => (
+          <div key={item.name} className="pipe-node">
+            <p className="pipe-kicker">Counter</p>
+            <p className="pipe-title">{item.name}</p>
+            <p className="pipe-text">{item.text}</p>
+          </div>
+        ))}
+      </div>
+      <div className="pipe-row is-split">
+        <div className="pipe-node is-stop">
+          <p className="pipe-kicker">Disagree</p>
+          <p className="pipe-title">Throw out the electronic total</p>
+          <p className="pipe-text">
+            Expand the risk-limiting audit, or take the mulligan path. Do not publish a total the three
+            counters do not share.
+          </p>
+        </div>
+        <div className="pipe-node is-public">
+          <p className="pipe-kicker">Agree</p>
+          <p className="pipe-title">Publish the ballot images</p>
+          <p className="pipe-text">
+            The pictures, and the choices read from them, go public. No voter identity is in the image. Anyone
+            may recount them.
+          </p>
+        </div>
+      </div>
+      <div className="pipe-row is-split">
+        <div className="pipe-node">
+          <p className="pipe-kicker">Ordinary ballot</p>
+          <p className="pipe-title">The image stays untied to a person</p>
+          <p className="pipe-text">Publishing the picture is not publishing who cast it.</p>
+        </div>
+        <div className="pipe-node is-public">
+          <p className="pipe-kicker">Canary</p>
+          <p className="pipe-title">A public identifier on the image</p>
+          <p className="pipe-text">
+            A few observers reject secrecy in advance. Their image can be matched to the checksum they release
+            later. A missing or mismatched canary image is a detection.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function CountingPage() {
   return (
     <article>
@@ -29,6 +111,7 @@ export function CountingPage() {
           <a href="#canary">Canary</a>
           <a href="#reconcile">Reconcile</a>
           <a href="#constant">Constant</a>
+          <a href="#firmware">Firmware</a>
           <a href="#audit">Audit</a>
           <a href="#custody">Custody</a>
         </nav>
@@ -135,8 +218,10 @@ export function CountingPage() {
               <p className="step-n">Public canary</p>
               <p className="step-title">Checksum enters the log</p>
               <p className="step-text">
-                Known person, known party line, published <Term id="commitment">checksum</Term>. Outsiders can
-                recompute it. Their written <Term id="observer-report" /> is still not the count.
+                Known person, known party line, published <Term id="commitment">checksum</Term>. Their{" "}
+                <Term id="ballot-image" /> is published with a stable public identifier, so outsiders can match
+                the picture to the checksum they release later. A missing or mismatched canary image is a
+                detection. Their written <Term id="observer-report" /> is still not the count.
               </p>
             </div>
           </div>
@@ -204,8 +289,24 @@ export function CountingPage() {
       </FlowBlock>
 
       <FlowBlock
+        id="firmware"
+        n="05 / The machines do not get a vote"
+        title="Three scanners. Three counters. Then the pictures go public."
+        lede={
+          <>
+            A scanner produces a <Term id="ballot-image" /> and nothing else. More than one scan of the same
+            batch has to agree. At least three programs, written separately, count those pictures and have to
+            match exactly. Paper is still the record. The electronic total is a check on the reading, not a
+            replacement for it.
+          </>
+        }
+      >
+        <ImagePipeline />
+      </FlowBlock>
+
+      <FlowBlock
         id="audit"
-        n="05 / The sample is not a fixed percent"
+        n="06 / The sample is not a fixed percent"
         title="A closer race pulls more paper."
         lede={
           <>
@@ -227,7 +328,7 @@ export function CountingPage() {
 
       <FlowBlock
         id="custody"
-        n="06 / The box changes hands"
+        n="07 / The box changes hands"
         title="One person does not both issue the paper and keep it."
         lede={
           <>
