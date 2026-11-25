@@ -148,5 +148,5 @@ Why: One ballot has to be seen splitting into three scans, meeting as one image,
 
 How: An SVG on the firmware section. The second fan is three counters. A scanner still does not emit the tally.
 
-Hash: pending this commit.
+Hash: 03736de.
 

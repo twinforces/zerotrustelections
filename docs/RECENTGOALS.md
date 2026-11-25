@@ -8,10 +8,10 @@ Why: The design was one scrolling page, then the two flows needed diagrams. Clai
 
 How: TanStack Start app in this repo. Canonical source log is `src/content/receipts.ts`, rendered at `/receipts`. Profile mark is `public/grumpy.jpg`. Docs stay short on purpose.
 
-What: Counting shows the image-and-count pipeline from gist revision 298ba5a.
+What: The firmware picture is a double fan.
 
-Why: Scanners are no longer a single firmware total. The pictures have to agree, three programs have to match, and then the images go public.
+Why: Cards did not show one ballot splitting into three scans, meeting as one image, then splitting into three counts.
 
-How: A diagram on `/counting#firmware`. The red-team pin moved. The file's version line still says 2026-11-23.
+How: SVG on `/counting#firmware`. The second fan is counters. Scanners still only make pictures.
 
-Hash: a9302c1.
+Hash: 03736de.
