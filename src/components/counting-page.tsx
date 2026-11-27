@@ -1,5 +1,4 @@
 import { Bars, Compare, FlowBlock, PageIntro, Steps } from "@/components/flow";
-import { ImagePipeline } from "@/components/image-pipeline";
 import { DiveList, Limit, PrimerList, Tail } from "@/components/page-bits";
 import { CryptoFairy } from "@/components/crypto-fairy";
 import { Term } from "@/components/term";
@@ -210,17 +209,26 @@ export function CountingPage() {
       <FlowBlock
         id="firmware"
         n="05 / The machines do not get a vote"
-        title="Three scanners. Three counters. Then the pictures go public."
+        title="Imaging and counting are not the same step."
         lede={
           <>
-            A scanner produces a <Term id="ballot-image" /> and nothing else. At least two have to agree.
-            The picture shows three. At least three programs, written separately, count that picture and have
-            to match exactly. The images are published, so anyone can run their own counting software. Why a
-            camera is enough is on <a className="prose-link" href="/hardware">Hardware</a>. Paper is still the record.
+            A scanner produces a <Term id="ballot-image" /> and nothing else. Test sheets are mixed in before
+            the pictures exist, and pulled back out only after the images are public. The drawings, with the
+            red tests mixed in and then extracted, are on <a className="prose-link" href="/hardware">Hardware</a>.
+            Paper is still the record.
           </>
         }
       >
-        <ImagePipeline />
+        <p className="fan-caption">
+          <a className="prose-link" href="/hardware#imaging">
+            Imaging
+          </a>{" "}
+          stops at a canonical image set.{" "}
+          <a className="prose-link" href="/hardware#counting">
+            Counting
+          </a>{" "}
+          starts from those pictures.
+        </p>
       </FlowBlock>
 
       <FlowBlock

@@ -170,4 +170,14 @@ How: Layout, scanners, test oracles, the shuffler, public images, captain canari
 
 Hash: ff75a0a.
 
+## 2026-11-27 split
+
+What: Imaging and counting are two drawings. Red tests are mixed in, then extracted.
+
+Why: The sample ballot was three offices with bubbles, and one fan treated the camera and the count as the same step.
+
+How: One contest on the sample sheet. Imaging ends at a canonical image set with the red still inside. Counting starts there, and the red comes back out when the test IDs are released.
+
+Hash: pending this commit.
+
 

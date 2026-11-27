@@ -303,7 +303,7 @@ export const receipts: ReceiptGroup[] = [
         source: "Elections.md, version 2026-11-27, standard ballot layout through test-ballot indistinguishability",
         href: GIST,
         supports:
-          "Confirmed against gist revision 80a0c45aed80cb6f2f5e62c7c6c350a2c52cfcd2. Scanners emit a raw or lossless image plus device ID and timestamp, and at least two must agree within a published pixel tolerance. External services commit test-image pools before the election and reveal only an assigned subset after the scans are hash-committed. Local staff never hold the expected images. A physical shuffler randomizes hopper order under dual control. There is no operator test mode and no test flag, only a page ID. Captain canaries cast through that same path. Three independent programs, each past a public validation suite, must match exactly or the electronic total is thrown out. The older short pipeline section is still in the file below these rules.",
+          "Confirmed against gist revision 80a0c45aed80cb6f2f5e62c7c6c350a2c52cfcd2. The Hardware page draws imaging and counting as separate steps. Red sheets in those drawings are the test ballots: mixed in before the scanners, still present in the published images and the preliminary count, then extracted when the oracles release the test IDs. The paper itself is not red and has no test flag. Scanners emit a raw or lossless image plus device ID and timestamp, and at least two must agree within a published pixel tolerance. Three independent programs must match exactly or the electronic total is thrown out.",
       },
       {
         id: "custody",

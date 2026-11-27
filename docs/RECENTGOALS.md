@@ -8,10 +8,10 @@ Why: The design was one scrolling page, then the two flows needed diagrams. Clai
 
 How: TanStack Start app in this repo. Canonical source log is `src/content/receipts.ts`, rendered at `/receipts`. Profile mark is `public/grumpy.jpg`. Docs stay short on purpose.
 
-What: Hardware collects why a dumb scanner is enough.
+What: Imaging and counting are separate drawings, and the red tests are mixed in then extracted.
 
-Why: The 27 November gist is a security argument, not a firmware patch.
+Why: The ballot sketch was wrong, and one fan hid the split.
 
-How: `/hardware`. The red-team pin is gist revision 80a0c45.
+How: `/hardware#imaging` and `/hardware#counting`.
 
-Hash: ff75a0a.
+Hash: pending this commit.
