@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { FlowBlock, PageIntro } from "@/components/flow";
-import { CountingDiagram, ImagingDiagram } from "@/components/hardware-diagrams";
+import { CountingDiagram, ImagingDiagram, CaptainDiagram } from "@/components/hardware-diagrams";
 import { CryptoFairy } from "@/components/crypto-fairy";
 import { Term } from "@/components/term";
 
@@ -142,9 +142,7 @@ export function HardwarePage() {
           </>
         }
       >
-        <p className="fan-caption">
-          A canary is another test whose expected content was fixed by a person. It is not a second count.
-        </p>
+        <CaptainDiagram />
       </FlowBlock>
     </article>
   );

@@ -180,4 +180,15 @@ How: One contest on the sample sheet. Imaging ends at a canonical image set with
 
 Hash: 7c74c1f.
 
+## 2026-11-27 captain
+
+What: The captain ballot has its own diagram: Shuffle, Image, name the page ID, Count.
+
+Why: That path was only a paragraph, and it does not need three scanners and three counters drawn again.
+
+How: One ordinary sheet goes through the same shuffle, red tests included. A missing image is a detection. The sheet stays in the count.
+
+Hash: pending this commit.
+
+
 

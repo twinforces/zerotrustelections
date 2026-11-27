@@ -186,3 +186,41 @@ export function CountingDiagram() {
     </figure>
   );
 }
+
+export function CaptainDiagram() {
+  return (
+    <figure className="fan-figure">
+      <svg className="fan-diagram" viewBox="0 0 440 560" role="img" aria-labelledby="captain-title captain-desc">
+        <title id="captain-title">A captain ballot goes through the same shuffle and stays in the count</title>
+        <desc id="captain-desc">
+          A captain casts an ordinary ballot into the same shuffle as every other sheet. It is imaged with the
+          mix. The captain then names the page ID. The public image must match. The ballot stays in the count.
+          It is not extracted with the red test sheets.
+        </desc>
+        <defs>
+          <Marker id="captain-arrow" />
+        </defs>
+        <Legend />
+        <Node x={120} y={36} w={200} h={100} title="Captain ballot" />
+        <Pile x={186} y={70} kind="paper" />
+        <Wire marker="captain-arrow" x1={220} y1={136} x2={220} y2={168} />
+        <Node x={120} y={168} w={200} h={100} title="Shuffle" />
+        <Pile x={186} y={202} kind="mixed" />
+        <Wire marker="captain-arrow" x1={220} y1={268} x2={220} y2={300} />
+        <Node x={120} y={300} w={200} h={44} title="Image" />
+        <Wire marker="captain-arrow" x1={220} y1={344} x2={220} y2={376} />
+        <Node x={70} y={376} w={300} h={44} title="Names the page ID" />
+        <Wire marker="captain-arrow" x1={220} y1={420} x2={220} y2={452} />
+        <Node x={120} y={452} w={200} h={44} title="Count" />
+        <text className="hw-detail" x="220" y="530" textAnchor="middle">
+          No match is a detection. This sheet is not extracted.
+        </text>
+      </svg>
+      <figcaption className="fan-caption">
+        Same shuffle as every other ballot, red tests included, so the captain's sheet cannot be picked out.
+        After the image is public they name the page ID. The picture has to match. The ballot stays in the
+        count. It is not one of the red sheets that get subtracted.
+      </figcaption>
+    </figure>
+  );
+}
