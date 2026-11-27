@@ -178,6 +178,6 @@ Why: The sample ballot was three offices with bubbles, and one fan treated the c
 
 How: One contest on the sample sheet. Imaging ends at a canonical image set with the red still inside. Counting starts there, and the red comes back out when the test IDs are released.
 
-Hash: pending this commit.
+Hash: 7c74c1f.
 
 

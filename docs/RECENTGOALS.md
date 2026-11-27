@@ -14,4 +14,4 @@ Why: The ballot sketch was wrong, and one fan hid the split.
 
 How: `/hardware#imaging` and `/hardware#counting`.
 
-Hash: pending this commit.
+Hash: 7c74c1f.
