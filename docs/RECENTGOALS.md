@@ -14,4 +14,4 @@ Why: Those are different sheets. The diagram has to show the split.
 
 How: `/hardware#canaries`.
 
-Hash: pending this commit.
+Hash: 295ee80.

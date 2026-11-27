@@ -198,7 +198,7 @@ Why: A captain ballot is a real vote. It is not a test sheet.
 
 How: Same simplified path. After Count, two piles.
 
-Hash: pending this commit.
+Hash: 295ee80.
 
 
 
