@@ -190,12 +190,12 @@ export function CountingDiagram() {
 export function CaptainDiagram() {
   return (
     <figure className="fan-figure">
-      <svg className="fan-diagram" viewBox="0 0 440 560" role="img" aria-labelledby="captain-title captain-desc">
-        <title id="captain-title">A captain ballot goes through the same shuffle and stays in the count</title>
+      <svg className="fan-diagram" viewBox="0 0 440 680" role="img" aria-labelledby="captain-title captain-desc">
+        <title id="captain-title">A captain ballot is counted. Red test ballots are subtracted.</title>
         <desc id="captain-desc">
           A captain casts an ordinary ballot into the same shuffle as every other sheet. It is imaged with the
-          mix. The captain then names the page ID. The public image must match. The ballot stays in the count.
-          It is not extracted with the red test sheets.
+          mix. The captain then names the page ID. At the count, red test ballots are subtracted. The captain
+          ballot stays.
         </desc>
         <defs>
           <Marker id="captain-arrow" />
@@ -212,14 +212,16 @@ export function CaptainDiagram() {
         <Node x={70} y={376} w={300} h={44} title="Names the page ID" />
         <Wire marker="captain-arrow" x1={220} y1={420} x2={220} y2={452} />
         <Node x={120} y={452} w={200} h={44} title="Count" />
-        <text className="hw-detail" x="220" y="530" textAnchor="middle">
-          No match is a detection. This sheet is not extracted.
-        </text>
+        <Wire marker="captain-arrow" x1={170} y1={496} x2={110} y2={536} />
+        <Wire marker="captain-arrow" x1={270} y1={496} x2={330} y2={536} />
+        <Node x={16} y={536} w={190} h={110} title="Tests subtracted" />
+        <Pile x={78} y={572} kind="test" />
+        <Node x={234} y={536} w={190} h={110} title="Captain stays" />
+        <Pile x={296} y={572} kind="paper" />
       </svg>
       <figcaption className="fan-caption">
-        Same shuffle as every other ballot, red tests included, so the captain's sheet cannot be picked out.
-        After the image is public they name the page ID. The picture has to match. The ballot stays in the
-        count. It is not one of the red sheets that get subtracted.
+        Captains do not get subtracted. Test ballots do. The captain's sheet goes through the same shuffle,
+        then they name the page ID. A missing image is a detection. The ballot itself stays in the count.
       </figcaption>
     </figure>
   );

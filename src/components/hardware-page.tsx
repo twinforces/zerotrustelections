@@ -137,7 +137,7 @@ export function HardwarePage() {
             <Term id="precinct-captain">Precinct captains</Term> and other pre-approved observers who reject
             secrecy cast an ordinary ballot through the same path. Afterward they publish a page ID or a{" "}
             <Term id="commitment">checksum</Term>. The published images must contain a match. A miss is an
-            attributed detection. Their sheet is not red, and it was not labeled. The rest of the canary rules
+            attributed detection. Captains do not get subtracted. Test ballots do. The rest of the canary rules
             are on <Link className="prose-link" to="/counting">Counting</Link>.
           </>
         }

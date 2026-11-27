@@ -188,6 +188,16 @@ Why: That path was only a paragraph, and it does not need three scanners and thr
 
 How: One ordinary sheet goes through the same shuffle, red tests included. A missing image is a detection. The sheet stays in the count.
 
+Hash: 7b39819.
+
+## 2026-11-27 stay
+
+What: The captain diagram splits at the count. Red tests are subtracted. The captain stays.
+
+Why: A captain ballot is a real vote. It is not a test sheet.
+
+How: Same simplified path. After Count, two piles.
+
 Hash: pending this commit.
 
 

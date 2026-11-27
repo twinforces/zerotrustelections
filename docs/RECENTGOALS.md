@@ -8,10 +8,10 @@ Why: The design was one scrolling page, then the two flows needed diagrams. Clai
 
 How: TanStack Start app in this repo. Canonical source log is `src/content/receipts.ts`, rendered at `/receipts`. Profile mark is `public/grumpy.jpg`. Docs stay short on purpose.
 
-What: Imaging and counting are separate drawings, and the red tests are mixed in then extracted.
+What: Captains stay in the count. Test ballots are subtracted.
 
-Why: The ballot sketch was wrong, and one fan hid the split.
+Why: Those are different sheets. The diagram has to show the split.
 
-How: `/hardware#imaging` and `/hardware#counting`.
+How: `/hardware#canaries`.
 
-Hash: 7c74c1f.
+Hash: pending this commit.
