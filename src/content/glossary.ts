@@ -252,6 +252,36 @@ export const glossary: GlossaryEntry[] = [
     aliases: ["test ballot", "constant", "injected"],
   },
   {
+    id: "ballot-layout",
+    term: "Standard ballot layout",
+    short:
+      "A standard ballot layout is one fixed grid for every precinct, with a square in the upper left and a circle in the lower right.",
+    note: "Every contest is a row or a block. The mark is a large oval or box in a fixed column. Those two marks let any counter fix rotation, scale, and skew. There is no butterfly layout. Only the words and the emoji sequences change. Every sheet carries a page ID in the same format, and there is no test flag.",
+    category: "Counting",
+    related: ["paper-ballot", "emoji-sequence", "ballot-image"],
+    aliases: ["registration marks", "page ID", "butterfly"],
+  },
+  {
+    id: "test-oracle",
+    term: "Test oracle",
+    short:
+      "A test oracle is an outside service that commits a pool of test-ballot images before the election and reveals only the assigned subset after the scans are committed.",
+    note: "Local staff never hold the expected pictures. A public rule assigns which pool applies to a batch only after that batch is hash-committed. The published images must contain every revealed test. A miss is a detection. This is not the voter-roll oracle.",
+    category: "Counting",
+    related: ["injected-ballot", "shuffler", "ballot-image", "oracle"],
+    aliases: ["external test oracle", "test oracles"],
+  },
+  {
+    id: "shuffler",
+    term: "Shuffler",
+    short:
+      "A shuffler is a physical mixer in the scanner hopper that randomizes sheet order under dual control before imaging.",
+    note: "After the shuffle, neither the operator nor the firmware knows which sheet is next. Tests are released one at a time after the previous batch is committed, or mixed into ordinary paper under dual control. There is no operator test mode. A scanner cannot special-case a known test.",
+    category: "Counting",
+    related: ["test-oracle", "injected-ballot", "canary", "ballot-image"],
+    aliases: ["physical shuffler", "hopper"],
+  },
+  {
     id: "rla",
     term: "Risk-limiting audit",
     short:
@@ -345,7 +375,7 @@ export const glossary: GlossaryEntry[] = [
     term: "Public canary",
     short:
       "A public canary is a precinct captain or other observer who rejects secrecy, votes a known party-line ballot, and puts that checksum in the published log.",
-    note: "Not every ballot is secret. Only the people who choose this role give secrecy up. Everyone else keeps a private receipt. The published checksum is a human-visible audit chain: a known person, a known choice, a fingerprint outsiders can recompute. The canary's written report is still not the count.",
+    note: "Not every ballot is secret. Only the people who choose this role give secrecy up. Everyone else keeps a private receipt. A captain canary is also a live test: the ballot goes through the same shuffler and the same scanners as every other sheet, and the published images must contain a match. A miss is an attributed detection. The canary's written report is still not the count.",
     category: "Counting",
     related: ["commitment", "precinct-captain", "emoji-sequence", "observer-report"],
     aliases: ["canary", "public canary", "party-line"],
@@ -374,7 +404,7 @@ export const glossary: GlossaryEntry[] = [
     term: "Ballot image",
     short:
       "A ballot image is the picture a scanner makes of one paper ballot. The scanner does not produce the count.",
-    note: "More than one scan of the batch must agree on the image set. Known test ballots must match pictures committed in advance. At least three independent programs then count the images and must match exactly. After that, the images and the choices read from them are published, with no voter identity. Anyone can run their own counting software on those images. An ordinary image stays untied to a person. A canary image carries a public identifier.",
+    note: "More than one scan of the batch must agree, within a published pixel tolerance, after the page is straightened using a square in the upper left and a circle in the lower right. The rule is at least two scanners or two passes. At least three independent programs then count the images and must match exactly. Each program has passed a public suite of generated images with known results. After that, the images are published, with no voter identity. Anyone can run their own counting software on them. An ordinary image stays untied to a person. A canary image is matched by a page ID or a checksum the voter publishes later.",
     category: "Counting",
     related: ["scanner-total", "paper-ballot", "canary", "rla"],
     aliases: ["ballot images", "cast-vote record"],

@@ -8,10 +8,10 @@ Why: The design was one scrolling page, then the two flows needed diagrams. Clai
 
 How: TanStack Start app in this repo. Canonical source log is `src/content/receipts.ts`, rendered at `/receipts`. Profile mark is `public/grumpy.jpg`. Docs stay short on purpose.
 
-What: The fan is labeled Scanner and Counter, with arrowheads, and public images are an open count.
+What: Hardware collects why a dumb scanner is enough.
 
-Why: The picture has to show direction, and publishing the images is so anyone can run their own software.
+Why: The 27 November gist is a security argument, not a firmware patch.
 
-How: Same diagram on `/counting#firmware`.
+How: `/hardware`. The red-team pin is gist revision 80a0c45.
 
-Hash: 17efe1d.
+Hash: pending this commit.

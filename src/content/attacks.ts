@@ -92,7 +92,7 @@ export const attackGroups: AttackGroup[] = [
         name: "Memory-card or firmware malware on scanners",
         verdict: "DETECTED",
         handling:
-          "Scanners produce images only. More than one scan must agree, and known test images must match the ones committed in advance. At least three independent programs count the images and must match exactly. A disagreement throws out the electronic total and expands the audit or the mulligan. Paper is still the record.",
+          "Scanners emit images only. At least two must agree, and a physical shuffler plus external test oracles keep a test from being recognizable in advance. At least three independent programs count the images and must match exactly. A disagreement throws out the electronic total and expands the audit or the mulligan. Paper is still the record. The published images are what anyone else can recount.",
       },
       {
         name: "Lookalike emoji shirt",

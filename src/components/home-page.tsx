@@ -60,7 +60,7 @@ export function HomePage() {
       <header className="border-b border-line">
         <div className="mx-auto max-w-6xl px-5 pt-14 pb-12 sm:pt-20 sm:pb-16">
           <p className="text-xs font-semibold tracking-widest text-faint uppercase">
-            Design baseline · 24 November 2026 · @GrumpyTechBro
+            Design baseline · 27 November 2026 · @GrumpyTechBro
           </p>
           <div className="mt-4 flex items-start gap-4">
             <img className="brand-mark" src="/grumpy.jpg" width={44} height={44} alt="GrumpyTechBro" />

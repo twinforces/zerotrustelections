@@ -4,6 +4,7 @@ import { BASELINE_GIST } from "@/content/red-team";
 const NAV = [
   { to: "/registration", label: "Registration" },
   { to: "/counting", label: "Counting" },
+  { to: "/hardware", label: "Hardware" },
   { to: "/attacks", label: "Attacks" },
   { to: "/red-team", label: "Red Team" },
   { to: "/glossary", label: "Glossary" },

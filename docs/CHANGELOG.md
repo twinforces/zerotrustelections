@@ -160,3 +160,14 @@ How: Same SVG. The last box says anyone can run a counter.
 
 Hash: 17efe1d.
 
+## 2026-11-27 hardware
+
+What: Hardware is its own page, and the baseline pin is gist revision 80a0c45, version 2026-11-27.
+
+Why: The usual objection is no machine counting. The answer is a camera plus checks, not another firmware card.
+
+How: Layout, scanners, test oracles, the shuffler, public images, captain canaries, and three counters. Counting still has the fan, and it points here.
+
+Hash: pending this commit.
+
+

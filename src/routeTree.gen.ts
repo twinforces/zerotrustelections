@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AttacksRouteImport } from './routes/attacks'
 import { Route as CountingRouteImport } from './routes/counting'
 import { Route as GlossaryRouteImport } from './routes/glossary'
+import { Route as HardwareRouteImport } from './routes/hardware'
 import { Route as ReceiptsRouteImport } from './routes/receipts'
 import { Route as RedTeamRouteImport } from './routes/red-team'
 import { Route as RegistrationRouteImport } from './routes/registration'
@@ -37,6 +38,11 @@ const CountingRoute = CountingRouteImport.update({
 const GlossaryRoute = GlossaryRouteImport.update({
   id: '/glossary',
   path: '/glossary',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HardwareRoute = HardwareRouteImport.update({
+  id: '/hardware',
+  path: '/hardware',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ReceiptsRoute = ReceiptsRouteImport.update({
@@ -70,6 +76,7 @@ export interface FileRoutesByFullPath {
   '/attacks': typeof AttacksRoute
   '/counting': typeof CountingRoute
   '/glossary': typeof GlossaryRoute
+  '/hardware': typeof HardwareRoute
   '/receipts': typeof ReceiptsRoute
   '/red-team': typeof RedTeamRoute
   '/registration': typeof RegistrationRoute
@@ -81,6 +88,7 @@ export interface FileRoutesByTo {
   '/attacks': typeof AttacksRoute
   '/counting': typeof CountingRoute
   '/glossary': typeof GlossaryRoute
+  '/hardware': typeof HardwareRoute
   '/receipts': typeof ReceiptsRoute
   '/red-team': typeof RedTeamRoute
   '/registration': typeof RegistrationRoute
@@ -93,6 +101,7 @@ export interface FileRoutesById {
   '/attacks': typeof AttacksRoute
   '/counting': typeof CountingRoute
   '/glossary': typeof GlossaryRoute
+  '/hardware': typeof HardwareRoute
   '/receipts': typeof ReceiptsRoute
   '/red-team': typeof RedTeamRoute
   '/registration': typeof RegistrationRoute
@@ -106,6 +115,7 @@ export interface FileRouteTypes {
     | '/attacks'
     | '/counting'
     | '/glossary'
+    | '/hardware'
     | '/receipts'
     | '/red-team'
     | '/registration'
@@ -117,6 +127,7 @@ export interface FileRouteTypes {
     | '/attacks'
     | '/counting'
     | '/glossary'
+    | '/hardware'
     | '/receipts'
     | '/red-team'
     | '/registration'
@@ -128,6 +139,7 @@ export interface FileRouteTypes {
     | '/attacks'
     | '/counting'
     | '/glossary'
+    | '/hardware'
     | '/receipts'
     | '/red-team'
     | '/registration'
@@ -140,6 +152,7 @@ export interface RootRouteChildren {
   AttacksRoute: typeof AttacksRoute
   CountingRoute: typeof CountingRoute
   GlossaryRoute: typeof GlossaryRoute
+  HardwareRoute: typeof HardwareRoute
   ReceiptsRoute: typeof ReceiptsRoute
   RedTeamRoute: typeof RedTeamRoute
   RegistrationRoute: typeof RegistrationRoute
@@ -175,6 +188,13 @@ declare module '@tanstack/react-router' {
       path: '/glossary'
       fullPath: '/glossary'
       preLoaderRoute: typeof GlossaryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hardware': {
+      id: '/hardware'
+      path: '/hardware'
+      fullPath: '/hardware'
+      preLoaderRoute: typeof HardwareRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/receipts': {
@@ -220,6 +240,7 @@ const rootRouteChildren: RootRouteChildren = {
   AttacksRoute: AttacksRoute,
   CountingRoute: CountingRoute,
   GlossaryRoute: GlossaryRoute,
+  HardwareRoute: HardwareRoute,
   ReceiptsRoute: ReceiptsRoute,
   RedTeamRoute: RedTeamRoute,
   RegistrationRoute: RegistrationRoute,

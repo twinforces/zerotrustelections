@@ -16,7 +16,7 @@ export type ReceiptGroup = {
 
 const GIST = "https://gist.github.com/twinforces/d99236e3da06118ee14506f6979997e5";
 const GIST_RAW =
-  "https://gist.githubusercontent.com/twinforces/d99236e3da06118ee14506f6979997e5/raw/298ba5a63898dcbcf99e565492121a22d35f2638/Elections.md";
+  "https://gist.githubusercontent.com/twinforces/d99236e3da06118ee14506f6979997e5/raw/80a0c45aed80cb6f2f5e62c7c6c350a2c52cfcd2/Elections.md";
 
 export const receipts: ReceiptGroup[] = [
   {
@@ -26,12 +26,12 @@ export const receipts: ReceiptGroup[] = [
     items: [
       {
         id: "gist",
-        claim: "The design baseline is the public gist Elections.md, version 2026-11-23.",
+        claim: "The design baseline is the public gist Elections.md, version 2026-11-27.",
         appears: "Footer, Red Team, and every flow that says it follows the baseline.",
         source: "twinforces/Elections.md",
         href: GIST,
         supports:
-          "Confirmed 24 November 2026 against gist revision 298ba5a63898dcbcf99e565492121a22d35f2638. The file's own version line still says 2026-11-23. This revision adds the image-and-count pipeline: scanners produce images only, at least three independent programs must match exactly, and the images are then published with no voter identity. The red-team link fetches that revision, not the unpinned raw URL.",
+          "Confirmed 27 November 2026 against gist revision 80a0c45aed80cb6f2f5e62c7c6c350a2c52cfcd2. The version line now says 2026-11-27. This revision adds the hardware controls: a standard ballot layout, image-only scanners that must agree, external test oracles, a physical shuffler, public images, captain canaries as live tests, and three independent counters. The red-team link fetches that revision, not the unpinned raw URL.",
       },
       {
         id: "gist-raw",
@@ -40,7 +40,7 @@ export const receipts: ReceiptGroup[] = [
         source: "Raw gist",
         href: GIST_RAW,
         supports:
-          "The button uses the grok.com/?q= form. The query tells Grok to fetch revision 298ba5a63898dcbcf99e565492121a22d35f2638, not the unpinned raw URL. A change on the website does not change the session. A later gist edit does not either, until this pin is moved.",
+          "The button uses the grok.com/?q= form. The query tells Grok to fetch revision 80a0c45aed80cb6f2f5e62c7c6c350a2c52cfcd2, not the unpinned raw URL. A change on the website does not change the session. A later gist edit does not either, until this pin is moved.",
       },
       {
         id: "session",
@@ -294,7 +294,16 @@ export const receipts: ReceiptGroup[] = [
         source: "Elections.md revision 298ba5a, diverse image-and-count pipeline and public ballot images",
         href: GIST,
         supports:
-          "Added 24 November 2026. The file's version line still says 2026-11-23. Several scans of a batch must agree, and known test-ballot images must match pictures committed in advance. Disagreement throws out the electronic total and expands the risk-limiting audit or the mulligan. Paper stays authoritative. After agreement, the images and the choices read from them are published. Ordinary images stay untied to a person. A canary image carries a public identifier. A missing or mismatched canary image is a detection. The diagram is a double fan: one ballot to three scanners, one canonical image, three counters, one canonical tally. Publishing the images means anyone can run their own counting software.",
+          "Added 24 November 2026. The file's version line at that time still said 2026-11-23. The 27 November baseline keeps the pipeline and adds the hardware controls on their own page. Several scans of a batch must agree. Disagreement throws out the electronic total. Paper stays authoritative. The diagram is a double fan: one ballot to three scanners, one canonical image, three counters, one canonical tally. Publishing the images means anyone can run their own counting software.",
+      },
+      {
+        id: "hardware",
+        claim: "A dumb scanner is enough because the layout is standard, at least two images must agree, outside services hold the test images, a shuffler hides which sheet is a test, the pictures are public, captains are live tests, and three programs must match.",
+        appears: "Hardware.",
+        source: "Elections.md, version 2026-11-27, standard ballot layout through test-ballot indistinguishability",
+        href: GIST,
+        supports:
+          "Confirmed against gist revision 80a0c45aed80cb6f2f5e62c7c6c350a2c52cfcd2. Scanners emit a raw or lossless image plus device ID and timestamp, and at least two must agree within a published pixel tolerance. External services commit test-image pools before the election and reveal only an assigned subset after the scans are hash-committed. Local staff never hold the expected images. A physical shuffler randomizes hopper order under dual control. There is no operator test mode and no test flag, only a page ID. Captain canaries cast through that same path. Three independent programs, each past a public validation suite, must match exactly or the electronic total is thrown out. The older short pipeline section is still in the file below these rules.",
       },
       {
         id: "custody",
