@@ -168,6 +168,6 @@ Why: The usual objection is no machine counting. The answer is a camera plus che
 
 How: Layout, scanners, test oracles, the shuffler, public images, captain canaries, and three counters. Counting still has the fan, and it points here.
 
-Hash: pending this commit.
+Hash: ff75a0a.
 
 

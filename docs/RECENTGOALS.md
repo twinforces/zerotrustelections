@@ -14,4 +14,4 @@ Why: The 27 November gist is a security argument, not a firmware patch.
 
 How: `/hardware`. The red-team pin is gist revision 80a0c45.
 
-Hash: pending this commit.
+Hash: ff75a0a.
